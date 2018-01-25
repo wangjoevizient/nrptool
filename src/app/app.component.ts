@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterLinkActive } from '@angular/router';
-// import { OrganizationDataService } from './OrganizationDataService';
+import { Organization } from './organization.model';
+import { OrganizationDataService } from './OrganizationDataService';
+
 
 @Component({
   selector: 'app-root',
@@ -9,4 +11,14 @@ import { RouterLinkActive } from '@angular/router';
 })
 export class AppComponent {
   title = 'app';
+  
+  organizations: Organization[];
+  selectedOrganization: number;
+
+  constructor(private OrgService: OrganizationDataService) {
+      this.OrgService.GetAllOrganizations().subscribe(data => this.organizations = data,
+          error => console.log(error),
+          () => console.log(this.organizations));
+  }
+
 }

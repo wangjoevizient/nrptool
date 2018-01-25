@@ -10,6 +10,7 @@ import { SurveyStatusComponent } from './survey-status/survey-status.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { OrganizationDataService } from './OrganizationDataService';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { HttpModule } from '@angular/http';
     FormsModule,
     BrowserModule
   ],
-  providers: [],
+  providers: [OrganizationDataService],
 	bootstrap: [AppComponent],
 	schemas: [
     CUSTOM_ELEMENTS_SCHEMA

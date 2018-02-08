@@ -1,3 +1,75 @@
-<p>
-  manage-residents works!
-</p>
+<!-- Ressident Add/Upload -->
+<div class="border-bottom-light-gray">
+  <div class="container padding-md">
+    <div class="float-left margin-md-right margin-top-xs">
+      <h3>Residents</h3>
+    </div>
+    <div class="form-group margin-sm-top"> <a routerLink="add-resident" class="btn btn-lg btn-primary padding-md margin-xs-right"> Add New Resident </a> <a href="" class="btn btn-lg btn-secondary padding-md"> Bulk Upload </a> </div>
+  </div>
+</div>
+<!-- /Ressident Add/Upload --> 
+<!-- Search & Filters -->
+<div class="container padding-md">
+  <div class="pull-left col-xs-12 col-sm-4 padding-md-top padding-none-left">
+    <div class="form-group">
+      <label class="sr-only">Search</label>
+			<input class="form-control" matInput (keyup)="applyFilter($event.target.value)" placeholder="Search...">
+    </div>
+  </div>
+  <div class="margin-sm-top pull-right col-xs-12 col-sm-6 text-right no-padding"> <a href="" class="btn btn-lg btn-secondary-ghost padding-md-left padding-md-right margin-xs-right"> <i class="fa fa-refresh padding-xs-right" aria-hidden="true"></i> Reset All </a> <a href="" class="btn btn-lg btn-secondary padding-md-left padding-md-right margin-xs-right"> <i class="fa fa-filter padding-xs-right" aria-hidden="true"></i> Filters </a> <a href="" class="btn btn-lg btn-secondary padding-md-left padding-md-right margin-xs-right"> <span class="margin-xs-right">+/-</span> Columns </a> <a href="" class="btn btn-lg btn-secondary padding-md-left padding-md-right"> <i class="fa fa-share-square-o padding-xs-right" aria-hidden="true"></i> Export </a> </div>
+</div>
+<!-- /Search & Filters --> 
+
+<div class="example-container mat-elevation-z8">
+  <mat-table #table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="rnId">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> RNID </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.rnId}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="cohortDate">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Cohort Date </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.cohortDate}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="firstName">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> First Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.firstName}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="lastName">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.lastName}} </mat-cell>
+		</ng-container>
+		
+		<ng-container matColumnDef="unit">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Unit </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.unit}} </mat-cell>
+		</ng-container>
+		
+		<ng-container matColumnDef="leave">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Leave </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.leave}} </mat-cell>
+		</ng-container>
+		
+		<ng-container matColumnDef="terminate">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Terminate </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.terminate}} </mat-cell>
+		</ng-container>
+		
+		<ng-container matColumnDef="mode">
+      <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+      <mat-cell *matCellDef="let element">  {{element.mode}} <mat-icon>mode_edit</mat-icon> </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+	</mat-table>
+	
+	<mat-paginator #paginator
+		[pageSize]="25"
+		[pageSizeOptions]="[25, 50, 100]"
+		[showFirstLastButtons]="true">
+  </mat-paginator>
+</div>

@@ -6,18 +6,26 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ManageResidentsComponent } from './manage-residents/manage-residents.component';
 import { SurveyStatusComponent } from './survey-status/survey-status.component';
-
+import { DataService} from './services/data.service'
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { OrganizationDataService } from './OrganizationDataService';
-
+import { AddResidentComponent } from './add-resident/add-resident.component';
+import { TerminationReportComponent } from './termination-report/termination-report.component';
+//Angular Material Components
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule, MatSortModule} from '@angular/material';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ManageResidentsComponent,
-    SurveyStatusComponent
+    SurveyStatusComponent,
+    AddResidentComponent,
+		TerminationReportComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,9 +33,15 @@ import { OrganizationDataService } from './OrganizationDataService';
 		CommonModule,
     HttpModule,
     FormsModule,
-    BrowserModule
+		BrowserModule,
+		BrowserAnimationsModule,
+		MatTableModule,
+		MatSortModule,
+		MatPaginatorModule,
+		MatIconModule,
+		MatButtonModule
   ],
-  providers: [OrganizationDataService],
+  providers: [DataService],
 	bootstrap: [AppComponent],
 	schemas: [
     CUSTOM_ELEMENTS_SCHEMA

@@ -6,14 +6,13 @@
 				<div class="pull-right"><a href="#" class="app-name padding-sm-left padding-lg-right hidden-xs">Hi, Joe</a>
 					
 					<span class="app-name padding-md-right">
-					
 						<select required name="Organization"
                 #refOrganization="ngModel"
                 class="form-control" [(ngModel)]="selectedOrganization">
             <option value="undefined">Please select Value</option>
             <option *ngFor="let Org of organizations"
                     [ngValue]="Org.orgId">
-                {{Org.orgName}}
+                {{Org.HCO_LONG_NAME}}
             </option>
         </select>
 					

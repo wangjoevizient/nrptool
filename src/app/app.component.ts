@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLinkActive } from '@angular/router';
-import { Organization } from './organization.model';
-import { OrganizationDataService } from './OrganizationDataService';
-
+import { Organization } from '../models/organization.model';
+import { DataService } from './services/data.service';
 
 @Component({
   selector: 'app-root',
@@ -15,10 +14,10 @@ export class AppComponent {
   organizations: Organization[];
   selectedOrganization: number;
 
-  constructor(private OrgService: OrganizationDataService) {
-      this.OrgService.GetAllOrganizations().subscribe(data => this.organizations = data,
-          error => console.log(error),
-          () => console.log(this.organizations));
+  constructor(private dataService: DataService) {
+		this.dataService.GetAllOrganizations().subscribe(data => this.organizations = data,
+			error => console.log(error),
+			() => console.log(this.organizations));
   }
 
 }

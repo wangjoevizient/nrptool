@@ -10,5 +10,4 @@ export class SharedService {
   changeOrgId( data: number) {
     this.orgId.next(data);
   }
-
 }

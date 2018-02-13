@@ -34,7 +34,6 @@ export class DataService {
 	public GetEthnicity = (): Observable<any> => {
 			return this._http.get(this.webapiRoot + "GetEthnicity/3")
 					.map((response: Response) => <any>response.json());
-
 	}
 
 	public GetDegreeReceived = (): Observable<any> => {

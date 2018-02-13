@@ -19,7 +19,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 //Pips
-import { BooleanPipe } from './pipes/boolean.pip';
+import { BooleanPipe } from './pipes/boolean.pipe';
 
 @NgModule({
   declarations: [

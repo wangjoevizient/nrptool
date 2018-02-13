@@ -10,7 +10,7 @@
 								class="form-control" 
 								[(ngModel)]="selectedOrganization"
 								(ngModelChange)="onOrgChange($event)">
-							<option *ngFor="let org of organizations;"
+							<option *ngFor="let org of organizations"
 								[ngValue]="org.orgId">{{org.orgName}}
 								
 							</option>

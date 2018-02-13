@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { RouterLinkActive } from '@angular/router';
+import { RouterLinkActive, Router } from '@angular/router';
 import { Organization } from '../models/organization.model';
 import { DataService } from './services/data.service';
+import { SharedService } from './services/shared.service';
 
 @Component({
   selector: 'app-root',
@@ -14,10 +15,17 @@ export class AppComponent {
   organizations: Organization[];
   selectedOrganization: number;
 
-  constructor(private dataService: DataService) {
-		this.dataService.GetAllOrganizations().subscribe(data => this.organizations = data,
+	constructor(private dataService: DataService, 
+		private sharedService: SharedService,
+		private router: Router) {
+		this.dataService.GetAllOrganizations().subscribe(
+			data => this.organizations = JSON.parse(data),
 			error => console.log(error),
-			() => console.log(this.organizations));
-  }
+			() => {console.log(this.organizations)});
+	}
+	
+	onOrgChange(newValue) {
+		this.sharedService.changeOrgId(newValue);
+	}
 
 }

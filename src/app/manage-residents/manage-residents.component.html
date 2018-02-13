@@ -2,9 +2,9 @@
 <div class="border-bottom-light-gray">
   <div class="container padding-md">
     <div class="float-left margin-md-right margin-top-xs">
-      <h3>Residents</h3>
+      <h3>Residents {{orgId}}</h3>
     </div>
-    <div class="form-group margin-sm-top"> <a routerLink="add-resident" class="btn btn-lg btn-primary padding-md margin-xs-right"> Add New Resident </a> <a href="" class="btn btn-lg btn-secondary padding-md"> Bulk Upload </a> </div>
+    <div class="form-group margin-sm-top"> <a routerLink="/add-resident" class="btn btn-lg btn-primary padding-md margin-xs-right"> Add New Resident </a> <a href="" class="btn btn-lg btn-secondary padding-md"> Bulk Upload </a> </div>
   </div>
 </div>
 <!-- /Ressident Add/Upload --> 
@@ -23,44 +23,44 @@
 <div class="example-container mat-elevation-z8">
   <mat-table #table [dataSource]="dataSource" matSort>
 
-    <ng-container matColumnDef="rnId">
+    <ng-container matColumnDef="rnid">
       <mat-header-cell *matHeaderCellDef mat-sort-header> RNID </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.rnId}} </mat-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.rnid}} </mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="cohortDate">
+    <ng-container matColumnDef="datehired">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Cohort Date </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.cohortDate}} </mat-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.datehired | date: 'dd/MM/yyyy'}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="firstName">
       <mat-header-cell *matHeaderCellDef mat-sort-header> First Name </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.firstName}} </mat-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.firstName}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="lastName">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.lastName}} </mat-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.lastName}} </mat-cell>
 		</ng-container>
 		
-		<ng-container matColumnDef="unit">
-      <mat-header-cell *matHeaderCellDef mat-sort-header> Unit </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.unit}} </mat-cell>
+		<ng-container matColumnDef="unittypedesc">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Type of Unit </mat-header-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.unittypedesc}} </mat-cell>
 		</ng-container>
 		
-		<ng-container matColumnDef="leave">
+		<ng-container matColumnDef="ABSENT">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Leave </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.leave}} </mat-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.ABSENT | boolean}} </mat-cell>
 		</ng-container>
 		
-		<ng-container matColumnDef="terminate">
-      <mat-header-cell *matHeaderCellDef mat-sort-header> Terminate </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.terminate}} </mat-cell>
+		<ng-container matColumnDef="Terminated">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Termination </mat-header-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.Terminated | boolean}} </mat-cell>
 		</ng-container>
 		
 		<ng-container matColumnDef="mode">
       <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-      <mat-cell *matCellDef="let element">  {{element.mode}} <mat-icon>mode_edit</mat-icon> </mat-cell>
+      <mat-cell *matCellDef="let rn">  {{rn.mode}} <mat-icon>mode_edit</mat-icon> </mat-cell>
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

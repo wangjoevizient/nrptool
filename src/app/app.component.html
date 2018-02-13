@@ -3,23 +3,20 @@
     <header>
       <div id="navbar" class="container-fluid navbar-collapse collapse">
         <div class="nav navbar-nav navbar-header"><img class="wordmark" alt="" src="./assets/images/vzt_r_rgb_wht_rev.png"><a href="#" class="app-name padding-sm-left hidden-xs">Nurse Residency Program Admin Tool</a></div>
-				<div class="pull-right"><a href="#" class="app-name padding-sm-left padding-lg-right hidden-xs">Hi, Joe</a>
-					
-					<span class="app-name padding-md-right">
-						<select required name="Organization"
-                #refOrganization="ngModel"
-                class="form-control" [(ngModel)]="selectedOrganization">
-            <option value="undefined">Please select Value</option>
-            <option *ngFor="let Org of organizations"
-                    [ngValue]="Org.orgId">
-                {{Org.HCO_LONG_NAME}}
-            </option>
-        </select>
-					
-					<!-- <i class="fa fa-caret-down" aria-hidden="true"></i> -->
-				
-				</span> 
-			</div>
+					<div class="pull-right"><a href="#" class="app-name padding-sm-left padding-lg-right hidden-xs">Hi, Joe</a>
+						<span class="app-name padding-md-right">
+							<select required name="Organization"
+								#refOrganization="ngModel"
+								class="form-control" 
+								[(ngModel)]="selectedOrganization"
+								(ngModelChange)="onOrgChange($event)">
+							<option *ngFor="let org of organizations;"
+								[ngValue]="org.orgId">{{org.orgName}}
+								
+							</option>
+						</select>			
+					</span> 
+				</div>
       </div>
     </header>
   </nav>
@@ -47,7 +44,6 @@
   </section>
 </apollo-header>
 <!-- /Subheader Menu --> 
-
 <router-outlet></router-outlet>
 
 <footer class="footer">

@@ -1,3 +1,189 @@
-<p>
-  add-resident works!
-</p>
+<!-- Ressident Add/Upload -->
+<div class="container-fluid padding-md border-bottom-light-gray">
+  <div class="margin-md-right margin-top-xs padding-md-left text-left">
+    <h3>Add New Resident</h3>
+  </div>
+  <div class="form-group margin-sm-top"> </div>
+</div>
+<div class="container-fluid">
+  <div class="col-xs-12 col-sm-12 col-md-8">
+    <div class="col-xs-12">
+      <div class="form-group col-xs-12 col-sm-12 col-md-8 col-lg-8 padding-md-top margin-none-left">
+        <label>1. RN ID<span class="viz-orange">*</span></label>
+        <input class="form-control" type="text">
+      </div>
+    </div>
+    <!-- 2 + 3 First Name - Last Name -->
+    <div class="col-xs-12 col-sm-12 col-md-8 padding-sm-top">
+      <div class="form-group col-xs-12 col-sm-6 col-md-5">
+        <label>2. First Name<span class="viz-orange">*</span></label>
+        <input class="form-control" type="text">
+      </div>
+      <div class="form-group col-xs-12 col-sm-6 col-md-5">
+        <label>3. Last Name<span class="viz-orange">*</span></label>
+        <input class="form-control" type="text">
+      </div>
+    </div>
+    <!-- /2 + 3 First Name - Last Name --> 
+    <!-- 4 Organization Email Address -->
+    <div class="col-xs-12 padding-sm-top">
+      <div class="form-group col-xs-12 col-sm-12 col-md-8">
+        <label>4. Organization Email Address<span class="viz-orange">*</span></label>
+        <input class="form-control" type="text">
+      </div>
+    </div>
+    <!-- /4 Organization Email Address --> 
+    <!-- 5 + 6  Dates -->
+    <div class="col-xs-12 padding-sm-top">
+      <div class="form-group col-xs-12 col-sm-12 col-md-5 col-lg-3">
+        <label>5. Cohort Date<span class="viz-orange">*</span></label>
+        <div class="input-group">
+          <input type="text" class="form-control dropdown-menu-right dropdown-menu-up" />
+          <span class="input-group-btn">
+          <button class="btn btn-secondary btn-icon-only" type="button"><i class="icon icon-calendar-o"></i></button>
+          </span> </div>
+      </div>
+      <div class="form-group col-xs-12 col-sm-12 col-md-5 col-lg-3">
+        <label>6. Employment Start Date<span class="viz-orange">*</span></label>
+        <div class="input-group">
+          <input type="text" class="form-control dropdown-menu-right dropdown-menu-up" />
+          <span class="input-group-btn">
+          <button class="btn btn-secondary btn-icon-only" type="button"><i class="icon icon-calendar-o"></i></button>
+          </span> </div>
+      </div>
+    </div>
+    <!-- /5 + 6  Dates -->
+	   <!-- 7 Type of unit -->
+    <div class="col-xs-12 padding-sm-top">
+			<div class="form-group col-xs-12 col-sm-12 col-md-6">
+				<label>7. Type of unit<span class="viz-orange">*</span></label>
+				<select required name="typeofunit"
+						class="form-control" [(ngModel)]="selectedtypeofunit">
+					<option selected disabled value="undefined"><span>Choose type of unit</span></option>
+					<option *ngFor="let tyu of typeofunits"
+									[ngValue]="tyu.Code_Id">{{tyu.Code_Description}}
+					</option>
+				</select>
+			</div>
+			<div class="form-group col-xs-12 col-sm-12 col-md-3">
+				<label>Other (Specify)</label>
+				<input class="form-control" type="text">
+			</div>
+	  </div>
+	   <!-- /7 Type of unit -->
+	  <!-- 8 Age in years -->
+    <div class="col-xs-12 padding-sm-top">
+          <div class="form-group col-xs-12 col-sm-12 col-md-6">
+            <label>8. Age in years (at date of hire)<span class="viz-orange">*</span></label>
+            <input class="form-control" type="text">
+          </div>
+	  </div>
+	   <!-- /	8 Age in years -->
+	  <!-- 9 Gender -->
+	  <div class="col-xs-12 padding-sm-top">
+          <div class="form-group col-xs-12 col-sm-12 col-md-6">
+						<label>9. Gender<span class="viz-orange">*</span></label>
+						<select required name="gender"
+                class="form-control" [(ngModel)]="selectedgender">
+            <option selected disabled value="undefined">Choose gender</option>
+            <option *ngFor="let gnd of genders"
+                    [ngValue]="gnd.Code_Id">
+                {{gnd.Code_Description}}
+            </option>
+            </select>
+           
+          </div>
+	  </div>
+	  <!-- /9 Gender -->
+	  <!-- 10 Ethnicity -->
+	  <div class="col-xs-12 padding-sm-top">
+          <div class="form-group col-xs-12 col-sm-12 col-md-6">
+						<label>10. Ethnicity<span class="viz-orange">*</span></label>
+						<select required name="Ethnicity"
+                class="form-control" [(ngModel)]="selectedEthnicity">
+            <option selected disabled value="undefined">Please select Value</option>
+            <option *ngFor="let eth of Ethnicitys"
+                    [ngValue]="eth.Code_Id">
+                {{eth.Code_Description}}
+            </option>
+            </select>
+          </div>
+		</div>
+		<div class="col-xs-12 padding-sm-top">
+			<div class="form-group col-xs-12 col-sm-12 col-md-6">
+				<label>11. Basic nursing education completed at<span class="viz-orange">*</span></label>
+				<input class="form-control" type="text">
+			</div>
+		</div>
+		<div class="col-xs-12 padding-sm-top">
+			<div class="form-group col-xs-12 col-sm-12 col-md-6">
+				<label>12. Degree received<span class="viz-orange">*</span></label>
+				<select required name="DegreeReceived"
+                class="form-control" [(ngModel)]="selectedDegreeReceived">
+            <option  selected disabled value="undefined">Choose Degree</option>
+            <option *ngFor="let dgrsd of DegreeReceiveds"
+                    [ngValue]="dgrsd.Code_Id">
+                {{dgrsd.Code_Description}}
+            </option>
+            </select>
+			</div>
+			<div class="form-group col-xs-12 col-sm-12 col-md-3">
+				<label>Other (Specify)</label>
+				<input class="form-control" type="text">
+			</div>
+		</div>
+
+		<div class="col-xs-12 padding-sm-top">
+			<div class="form-group col-xs-12 col-sm-12 col-md-6">
+				<label>13. Previous non-nursing degree<span class="viz-orange">*</span></label>
+				<select required name="Previousnursingdegree"
+                class="form-control" [(ngModel)]="selectedPreviousnursingdegree">
+            <option selected disabled value="undefined">Choose previous non-nursing degree</option>
+            <option *ngFor="let nsdg of Previousnursingdegrees"
+                    [ngValue]="nsdg.Code_Id">
+                {{nsdg.Code_Description}}
+            </option>
+       </select>
+			</div>
+			<div class="form-group col-xs-12 col-sm-12 col-md-3">
+				<label>Major</label>
+				<input class="form-control" type="text">
+			</div>
+		</div>
+		<div class="col-xs-12 padding-sm-top">
+			<div class="form-group col-xs-12 col-sm-12 col-md-6">
+				<label>14. Overall grade point average<span class="viz-orange">*</span></label>
+				<select required name="OverallGPA"
+				class="form-control" [(ngModel)]="selectedOverallGPA">
+		    <option selected disabled value="undefined">Choose GPA</option>
+		    <option *ngFor="let gpa of OverallGPAs"
+						[ngValue]="gpa.Code_Id">
+				{{gpa.Code_Description}}
+		    </option>
+		    </select>
+			</div>
+		</div>
+		<div class="col-xs-12 padding-sm-top">
+			<div class="form-group col-xs-12 col-sm-12 col-md-6">
+				<label>15 Grant NRP meeting place access<span class="viz-orange">*</span></label>
+				<div class="radio">
+					<label>
+					<input type="radio" id="rdyes">Yes</label>
+				</div>
+				<div class="radio">
+						<label>
+						<input type="radio" id="rdno">No</label>
+					</div>
+			</div>
+		</div>
+
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-4">
+    <div class="padding-md bg-ex-light-gray margin-md-top">
+      <h4>Resources</h4>
+      <p><a href=""><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Resident Demographic Form</a></p>
+      <p><a href=""><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Unit Defintions</a></p>
+    </div>
+  </div>
+</div>
+<!-- /Ressident Add/Upload --> 

@@ -9,7 +9,8 @@ import { rnInfo } from '../../models/rnInfo.model'
   styleUrls: ['./manage-residents.component.scss']
 })
 export class ManageResidentsComponent implements OnInit {
-	orgId: number;
+	orgId: number = 262;
+	pageText: string;
 	constructor(private dataService: DataService, private sharedService: SharedService) {
 
 		sharedService.orgId$.subscribe(orgId => {
@@ -27,9 +28,12 @@ export class ManageResidentsComponent implements OnInit {
 	displayedColumns = [
 		'rnid', 
 		'datehired', 
+		'firstName',
+		'lastName',
 		'unittypedesc', 
 		'ABSENT', 
-		'Terminated'];
+		'Terminated', 
+		'mode'];
 
 	@ViewChild(MatSort) sort: MatSort;
 	@ViewChild(MatPaginator) paginator: MatPaginator;

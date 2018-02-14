@@ -8,6 +8,8 @@ export interface rnInfo {
 	//"Participation TYPE": string;
 	datehired: string;
 	unittypedesc: string;
+	Organizationemailaddress: string;
+	EmploymentStartdate: string;
 	// age: string;
 	// Gender: string;
 	// bacdrgrcvdfm: string;

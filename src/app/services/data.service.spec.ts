@@ -17,7 +17,7 @@ describe('DataService', () => {
     expect(service).toBeTruthy();
 	}));
 	
-	fit('GIVEN_NoIdentity_WHEN_CallingGetOrgsList_THEN_ReturnAllOrgs', inject([DataService], (service: DataService) => {
+	it('GIVEN_NoIdentity_WHEN_CallingGetOrgsList_THEN_ReturnOrgs', inject([DataService], (service: DataService) => {
 		let orgs: rnInfo[] = [];
 		service.GetAllOrganizations().subscribe(
 				data => {
@@ -26,7 +26,6 @@ describe('DataService', () => {
 				},
 			error => console.log(error),
 			() => {console.log(this.orgs)});
-		//expect(orgs[0].orgId)).toEqual(262);
 	}));
 });
 

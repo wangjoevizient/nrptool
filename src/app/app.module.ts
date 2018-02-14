@@ -18,6 +18,8 @@ import { MatTableModule, MatSortModule} from '@angular/material';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material'
 //Pips
 import { BooleanPipe } from './pipes/boolean.pipe';
 
@@ -42,7 +44,9 @@ import { BooleanPipe } from './pipes/boolean.pipe';
 		MatSortModule,
 		MatPaginatorModule,
 		MatIconModule,
-		MatButtonModule
+		MatButtonModule,
+		MatDatepickerModule,
+		MatNativeDateModule
   ],
   providers: [DataService, SharedService],
 	bootstrap: [AppComponent],

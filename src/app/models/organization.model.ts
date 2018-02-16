@@ -1,4 +1,4 @@
 export class Organization {
-    public orgID: number;
+    public orgId: number;
 		public orgName: string;
 }

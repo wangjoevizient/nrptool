@@ -5,10 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ManageResidentsComponent } from './manage-residents/manage-residents.component';
 import { SurveyStatusComponent } from './survey-status/survey-status.component';
-import { DataService} from './services/data.service'
-import { SharedService} from './services/shared.service'
+import { DataService} from '../services/data.service'
+import { SharedService} from '../services/shared.service'
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AddResidentComponent } from './add-resident/add-resident.component';
 import { TerminationReportComponent } from './termination-report/termination-report.component';
@@ -21,7 +21,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material'
 //Pips
-import { BooleanPipe } from './pipes/boolean.pipe';
+import { BooleanPipe } from '../pipes/boolean.pipe';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,8 @@ import { BooleanPipe } from './pipes/boolean.pipe';
 		AppRoutingModule,
 		CommonModule,
     HttpModule,
-    FormsModule,
+		FormsModule,
+		ReactiveFormsModule,
 		BrowserModule,
 		BrowserAnimationsModule,
 		MatTableModule,

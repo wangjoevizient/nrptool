@@ -4,21 +4,33 @@
     <div class="float-left margin-md-right margin-top-xs">
       <h3>Residents</h3>
     </div>
-    <div class="form-group margin-sm-top"> <a routerLink="/add-resident" class="btn btn-lg btn-primary padding-md margin-xs-right"> Add New Resident </a> <a href="" class="btn btn-lg btn-secondary padding-md"> Bulk Upload </a> </div>
+    <div class="form-group margin-sm-top">
+      <a routerLink="/add-resident" class="btn btn-lg btn-primary padding-md margin-xs-right"> Add New Resident </a>
+      <a href="" class="btn btn-lg btn-secondary padding-md"> Bulk Upload </a>
+    </div>
   </div>
 </div>
-<!-- /Ressident Add/Upload --> 
+<!-- /Ressident Add/Upload -->
 <!-- Search & Filters -->
 <div class="container padding-md">
   <div class="pull-left col-xs-12 col-sm-4 padding-md-top padding-none-left">
     <div class="form-group">
-			<label class="sr-only">Search</label>
-			<input class="form-control" matInput (keyup)="applyFilter($event.target.value)" placeholder="Search...">
-		</div>
+      <label class="sr-only">Search</label>
+      <input class="form-control" matInput (keyup)="applyFilter($event.target.value)" placeholder="Search...">
+    </div>
   </div>
-  <div class="margin-sm-top pull-right col-xs-12 col-sm-6 text-right no-padding"> <a href="" class="btn btn-lg btn-secondary-ghost padding-md-left padding-md-right margin-xs-right"> <i class="fa fa-refresh padding-xs-right" aria-hidden="true"></i> Reset All </a> <a href="" class="btn btn-lg btn-secondary padding-md-left padding-md-right margin-xs-right"> <i class="fa fa-filter padding-xs-right" aria-hidden="true"></i> Filters </a> <a href="" class="btn btn-lg btn-secondary padding-md-left padding-md-right margin-xs-right"> <span class="margin-xs-right">+/-</span> Columns </a> <a href="" class="btn btn-lg btn-secondary padding-md-left padding-md-right"> <i class="fa fa-share-square-o padding-xs-right" aria-hidden="true"></i> Export </a> </div>
+  <div class="margin-sm-top pull-right col-xs-12 col-sm-6 text-right no-padding">
+    <a href="" class="btn btn-lg btn-secondary-ghost padding-md-left padding-md-right margin-xs-right">
+      <i class="fa fa-refresh padding-xs-right" aria-hidden="true"></i> Reset All </a>
+    <a href="" class="btn btn-lg btn-secondary padding-md-left padding-md-right margin-xs-right">
+      <i class="fa fa-filter padding-xs-right" aria-hidden="true"></i> Filters </a>
+    <a href="" class="btn btn-lg btn-secondary padding-md-left padding-md-right margin-xs-right">
+      <span class="margin-xs-right">+/-</span> Columns </a>
+    <a href="" class="btn btn-lg btn-secondary padding-md-left padding-md-right">
+      <i class="fa fa-share-square-o padding-xs-right" aria-hidden="true"></i> Export </a>
+  </div>
 </div>
-<!-- /Search & Filters --> 
+<!-- /Search & Filters -->
 
 <div class="example-container mat-elevation-z8">
   <mat-table #table [dataSource]="dataSource" matSort>
@@ -41,42 +53,43 @@
     <ng-container matColumnDef="lastName">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </mat-header-cell>
       <mat-cell *matCellDef="let rn"> {{rn.lastName}} </mat-cell>
-		</ng-container>
-		<ng-container matColumnDef="Email">
+    </ng-container>
+    <ng-container matColumnDef="Email">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>
       <mat-cell *matCellDef="let rn"> {{rn.Organizationemailaddress}} </mat-cell>
-		</ng-container>
-		<ng-container matColumnDef="StartDate">
+    </ng-container>
+    <ng-container matColumnDef="StartDate">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Employment Start Date </mat-header-cell>
       <mat-cell *matCellDef="let rn"> {{rn.EmploymentStartdate}} </mat-cell>
-		</ng-container>
-		<ng-container matColumnDef="unittypedesc">
+    </ng-container>
+    <ng-container matColumnDef="unittypedesc">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Type of Unit </mat-header-cell>
       <mat-cell *matCellDef="let rn"> {{rn.unittypedesc}} </mat-cell>
-		</ng-container>
-		
-		<ng-container matColumnDef="ABSENT">
+    </ng-container>
+
+    <ng-container matColumnDef="ABSENT">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Leave </mat-header-cell>
       <mat-cell *matCellDef="let rn"> {{rn.ABSENT | boolean}} </mat-cell>
-		</ng-container>
-		
-		<ng-container matColumnDef="Terminated">
+    </ng-container>
+
+    <ng-container matColumnDef="Terminated">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Termination </mat-header-cell>
       <mat-cell *matCellDef="let rn"> {{rn.Terminated | boolean}} </mat-cell>
-		</ng-container>
-		
-		<ng-container matColumnDef="mode">
+    </ng-container>
+
+    <ng-container matColumnDef="mode">
       <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-      <mat-cell *matCellDef="let rn">  {{rn.mode}} <a routerLink='/edit-resident/{{rn.rnid}}'>Edit<mat-icon>mode_edit</mat-icon></a> </mat-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.mode}}
+        <a routerLink='/edit-resident/{{rn.rnid}}'>Edit
+          <mat-icon>mode_edit</mat-icon>
+        </a>
+      </mat-cell>
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-	</mat-table>
-	
-	<mat-paginator #paginator
-		[pageSize]="25"
-		[pageSizeOptions]="[25, 50, 100, 200]"
-		[showFirstLastButtons]="true">
+  </mat-table>
+
+  <mat-paginator #paginator [pageSize]="25" [pageSizeOptions]="[25, 50, 100, 200]" [showFirstLastButtons]="true">
   </mat-paginator>
 </div>

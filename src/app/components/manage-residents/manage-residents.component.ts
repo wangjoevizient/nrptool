@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
-import { DataService } from '../services/data.service';
-import { SharedService } from '../services/shared.service';
+import { DataService } from '../../services/data.service'
+import { SharedService } from '../../services/shared.service';
 import { rnInfo } from '../../models/rnInfo.model'
 @Component({
   selector: 'app-manage-residents',
@@ -9,7 +9,7 @@ import { rnInfo } from '../../models/rnInfo.model'
   styleUrls: ['./manage-residents.component.scss']
 })
 export class ManageResidentsComponent implements OnInit {
-	orgId: number = 262;
+	orgId: number;
 	pageText: string;
 	constructor(private dataService: DataService, private sharedService: SharedService) {
 

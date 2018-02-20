@@ -1,0 +1,66 @@
+/*
+ * Pagination
+ */
+@mixin pagination-color-variant($color, $active-background, $active-border, $border, $cell-background, $hover){
+  /**
+   * $color font and active color
+   * $active-background active item background color
+   * $active-border active item border color
+   * $border border color
+   * $cell-background common item background and active item font color
+   * $border border color
+   */
+  &>li>a, &>li>span {
+    color: $color;
+    background-color: $cell-background;
+  }
+  &>li>a:hover, &>li>span:hover {
+    color: $color;
+    background-color: $hover;
+    border-color: $border;
+  }
+  &>li>a:focus, &>li>span:focus {
+    color: $color;
+    background-color: $cell-background;
+    border-color: $border;
+  }
+  &>.active>a, &>.active>a:hover, &>.active>a:focus, &>.active>span, &>.active>span:hover, &>.active>span:focus {
+    color: $color;
+    background-color: $active-background;
+    border-color: $active-border;
+  }
+}
+.pagination>li>a, .pagination>li>span{
+  font-weight: 400;
+}
+.pagination {
+  @include pagination-color-variant($viz-orange, lighten($viz-orange, 40%), lighten($viz-orange, 25%), $color-pagination-border, $white, $color-pagination-background-hover);
+}
+
+.pagination-orange {
+  @include pagination-color-variant($viz-orange, lighten($viz-orange, 40%), lighten($viz-orange, 25%), $color-pagination-border, $white, $color-pagination-background-hover);
+}
+
+.pagination-yellow {
+  @include pagination-color-variant($viz-yellow, lighten($viz-yellow, 40%), lighten($viz-yellow, 25%), $color-pagination-border, $white, $color-pagination-background-hover);
+}
+
+.pagination-green {
+  @include pagination-color-variant($viz-green, lighten($viz-green, 40%), lighten($viz-green, 25%), $color-pagination-border, $white, $color-pagination-background-hover);
+}
+
+.pagination-purple {
+  @include pagination-color-variant($viz-purple, lighten($viz-purple, 40%), lighten($viz-purple, 25%), $color-pagination-border, $white, $color-pagination-background-hover);
+}
+
+.pagination-blue {
+  @include pagination-color-variant($viz-blue, lighten($viz-blue, 40%), lighten($viz-blue, 25%), $color-pagination-border, $white, $color-pagination-background-hover);
+}
+
+.pagination-gray {
+  @include pagination-color-variant($viz-gray, lighten($viz-gray, 40%), lighten($viz-gray, 25%), $color-pagination-border, $white, $color-pagination-background-hover);
+}
+
+.pagination-black {
+  @include pagination-color-variant($viz-black, lighten($viz-black, 40%), lighten($viz-black, 25%), $color-pagination-border, $white, $color-pagination-background-hover);
+}

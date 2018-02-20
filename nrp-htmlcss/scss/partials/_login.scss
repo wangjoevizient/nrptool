@@ -1,0 +1,51 @@
+.wrapper-login {
+  margin: 50px auto;
+	max-width: 450px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+  text-align: center;
+  padding: 20px 15px 15px;
+  @media (min-width: 554px) {
+    padding: 31px 24px 15px;
+  }
+  .logo-login {
+    text-align: center;
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto 20px;
+    @media (min-width: 554px) {
+      max-width: 280px;
+      margin-bottom: 32px;
+    }
+    img {
+      width: 100%;
+      @media (min-width: 554px) {
+        width: 201px;
+      }
+    }
+  }
+  .form-login {
+    .jcf-select {
+      max-width: 100%;
+      text-align: left;
+      margin-bottom: 16px;
+    }
+    .form-group {
+      @media (min-width: 554px) {
+        margin-bottom: 32px;
+      }
+      .form-control {
+        width: 100%;
+      }
+    }
+    .btn {
+      width: 100%;
+      margin-bottom: 27px;
+    }
+  }
+  .form-login-info {
+    p {
+      margin-bottom: 2px;
+    }
+  }
+}

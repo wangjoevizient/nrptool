@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>background</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ToolKit-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-136.000000, -396.000000)">
+        <g id="1" transform="translate(135.000000, 227.000000)" fill="#BFBFBF" fill-rule="nonzero">
+            <g id="1-copy" transform="translate(1.000000, 157.000000)">
+                <g id="background" transform="translate(0.000000, 12.000000)">
+                    <polygon id="Shape" points="9.27197 13.50299 14.44189 13.50299 11.87946 5.72388"></polygon>
+                    <path d="M23,0 L1,0 C0.44727,0 0,0.44775 0,1 L0,23 C0,23.55225 0.44727,24 1,24 L23,24 C23.55273,24 24,23.55225 24,23 L24,1 C24,0.44775 23.55273,0 23,0 Z M19.70172,20 L14.31055,20 L14.31055,18.80695 L16.12256,18.6081 L14.82031,15 L8.82031,15 L7.59131,18.60809 L9.38178,18.80694 L9.38178,20 L4.29828,20 L4.29828,18.82855 L5.24841,18.58557 C5.6029,18.49744 5.71264,18.43085 5.80084,18.1654 L10.66296,4 L13.22723,4 L18.17761,18.18793 C18.26574,18.45337 18.44208,18.49744 18.70843,18.56311 L19.70172,18.80695 L19.70172,20 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

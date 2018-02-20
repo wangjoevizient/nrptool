@@ -1,0 +1,63 @@
+/*!
+angular-xeditable - 0.1.8
+Edit-in-place for angular.js
+Build date: 2014-01-10 
+*/
+
+.editable-wrap{display:inline-block;white-space:nowrap;margin:0}.editable-wrap .editable-controls,.editable-wrap .editable-error{margin-bottom:0}.editable-wrap .editable-controls>input,.editable-wrap .editable-controls>select,.editable-wrap .editable-controls>textarea{margin-bottom:0}.editable-wrap .editable-input{display:inline-block}.editable-buttons{display:inline-block;vertical-align:top}.editable-buttons button{margin-left:5px}.editable-input.editable-has-buttons{width:auto}.editable-bstime .editable-input input[type=text]{width:46px}.editable-bstime .well-small{margin-bottom:0;padding:10px}.editable-range output{display:inline-block;min-width:30px;vertical-align:top;text-align:center}.editable-color input[type=color]{width:50px}.editable-checkbox label span,.editable-checklist label span,.editable-radiolist label span{margin-left:7px;margin-right:10px}.editable-hide{display:none!important}.editable-click,a.editable-click{text-decoration:none;color:#428bca;border-bottom:dashed 1px #428bca}.editable-click:hover,a.editable-click:hover{text-decoration:none;color:#2a6496;border-bottom-color:#2a6496}.editable-empty,.editable-empty:hover,.editable-empty:focus,a.editable-empty,a.editable-empty:hover,a.editable-empty:focus{font-style:italic;color:#D14;text-decoration:none}
+
+.editable-input.editable-has-buttons { // Constrains the input so buttons can be placed on the right
+  width: 65%; // Fallback
+  width: calc(100% - 55px);
+}
+
+.editable-click,
+.editable-empty { // Remove the dotted border applied by xEditable
+  border-bottom: 0;
+  color: $text-color;
+  &:hover {
+    color: $text-color;
+    cursor: pointer;
+  }
+}
+
+.editable-buttons { // Put the confirm / cancel buttons to the right of the input
+  float: right;
+}
+
+.form-inline .header-metric { // For editing initiative and header
+  margin-right: 30px;
+  vertical-align: top;
+  .editable-wrap {
+    display: block;
+  }
+  .editable-controls {
+    margin-right: 0;
+  }
+}
+
+.editable-lg { // For editing initiative titles and other large things
+  .editable-input {
+    min-width: 300px;
+  }
+}
+
+body { // Needed to override the glyphicon CSS
+  .glyphicon {
+    @extend .icon;
+  }
+
+  .glyphicon-ok {
+    @extend .icon-check;
+  }
+
+  .glyphicon-remove {
+    @extend .icon-times;
+  }  
+}
+
+h2 {
+  &.editable-click {
+    color: $viz-black;
+  }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="22px" viewBox="0 0 24 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>button-2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ToolKit-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-136.000000, -483.000000)">
+        <g id="1" transform="translate(135.000000, 227.000000)" fill="#BFBFBF" fill-rule="nonzero">
+            <g id="1-copy-2" transform="translate(1.000000, 244.000000)">
+                <g id="button-2" transform="translate(0.000000, 12.000000)">
+                    <path d="M23,15 L20,15 L20,13 L22,13 L22,2 L2,2 L2,13 L5,13 L5,15 L1,15 C0.447,15 0,14.552 0,14 L0,1 C0,0.448 0.447,0 1,0 L23,0 C23.553,0 24,0.448 24,1 L24,14 C24,14.552 23.553,15 23,15 Z" id="Shape"></path>
+                    <path d="M20.561,19.439 L14.35,13.228 L20,10 L5,6 L9,21 L12.229,15.35 L18.44,21.561 C19.026,22.147 19.975,22.147 20.561,21.561 C21.146,20.975 21.146,20.025 20.561,19.439 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

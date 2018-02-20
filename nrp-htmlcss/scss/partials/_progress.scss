@@ -1,0 +1,61 @@
+.progress {
+  box-shadow: none;
+  border: 1px solid $gray;
+  margin-bottom: 0;
+  border-radius: 3px;
+  &.progress-sm {
+    height: 10px;
+  }
+}
+
+.table {
+  .progress-sm { // For when a progress meter occurs in a table
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+}
+
+.progress-bar {
+  box-shadow: none;
+  border-radius: $progress-border-radius;
+}
+
+.progress-bar-container {
+  width:auto;
+  overflow:hidden;
+}
+
+.progress-metric-container {
+  width:3em;
+  float:left;
+}
+
+.modal-window { //Modal window
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  max-width:352px;
+  padding: 24px 32px 0;
+  .modal-title {
+    text-align: center;
+    color: $viz-gray;
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+  .modal-body-text {
+    color: $viz-gray;
+    text-align: center;
+    margin-bottom: 32px;
+    font-weight: 300;
+  }
+  .modal-loading-image {
+    display: block;
+    margin: -35px auto 0;
+  }
+}
+
+.progress-window { //progress-bar window styles
+  padding-bottom: 24px;
+  .progress-bar {
+   border-radius: 3px 0 0 3px;
+ }
+}

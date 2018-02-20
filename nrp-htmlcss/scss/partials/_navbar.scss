@@ -1,0 +1,15 @@
+/**
+ * The header's dark version which has white font color
+ */
+.nav-bar-dark{
+  color: #fff;
+  a,  
+  .btn{
+    color: #fff;
+  }
+
+  .nav > li > a:hover, 
+  .nav > li > a:focus{
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,16 @@
+footer {
+	text-align: center;
+	padding: 10px;
+	z-index: 1000;
+  }
+html {
+  position: relative;
+  min-height: 100%;
+}
+.footer {
+	border-top: 1px solid $viz-light-gray;
+	width: 100%;
+  position: absolute;
+  bottom: 30px;
+  height: 30px;
+}

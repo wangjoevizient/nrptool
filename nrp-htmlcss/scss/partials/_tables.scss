@@ -1,0 +1,447 @@
+.table.table-condensed { // Reduce font size for condensed table
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > td {
+        font-size: 13px;
+        &:first-of-type {
+          padding-left: 0;
+        }
+        &:last-of-type{
+          padding-right: 0;
+        }
+      }
+      > th {
+        font-size: 12px;
+        &:first-of-type {
+          padding-left: 0;
+        }
+        &:last-of-type{
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.table > thead > tr > th { // Set table header text
+  font-size: 13px;
+  font-weight: 400;
+  border-bottom: 1px solid lighten($viz-light-gray, 5%);
+  user-select: none;
+  .icon {
+    margin-left: 1em;
+  }
+}
+
+.table-striped { // Set additional colors for striped table
+  border: 1px solid lighten($viz-light-gray, 5%);
+
+  > thead tr:not(.tr-subtotals) { // Striped header background
+    background-color: $viz-extra-light-gray;
+    color: $text-color;
+
+    > th:not(:first-of-type) { // Apply to all execpt the first
+      border-left: 1px solid lighten($viz-light-gray, 5%);
+    }
+    
+    > th:not(:last-of-type) { // Apply to all except the last
+      border-right: 1px solid lighten($viz-light-gray, 5%);
+    }
+  }  
+  > thead .tr-subtotals {
+    background-color: $white;
+    border-top: 0;
+    
+    > th {
+      border-top: 0;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0;
+      text-transform: capitalize;
+    }
+  }
+  > tbody:first-of-type > tr:first-of-type > td {
+    border-top: 0; // Remove top border on first row of accordion table
+  }
+}
+
+.table-condensed {
+  thead tr th {
+    color: $gray-dark;
+  }
+}
+
+// Accordion Styles
+
+.table > tbody + tbody { // Remove extra border in accordion table
+  border-top: 0;
+}
+
+.table > tbody > tr.tr-hidden > td { // Completely collapse accordion content
+  border-top: 0;
+  padding: 0;
+}
+
+.tr-hidden {
+  > td {
+    box-shadow: // Place a faux border within the container instead of outside
+    inset 0px 1px 0px $gray-light, // Top
+    inset 0px 0px 0px $gray-light, // Right
+    inset 0px -3px 0px $gray-light, // Bottom
+    inset 0px 0px 0px $gray-light; // Left
+  }
+  .expandedDiv {
+    padding: 30px;
+  }
+}
+
+.table-striped { // Matches accordion table markup
+  > tbody > tr:nth-of-type(odd) { 
+    background-color: $white;
+  } 
+  > tbody > tr:nth-of-type(even) {
+    background-color: $table-bg-accent;
+  } 
+  > tbody:nth-of-type(even) > tr {
+    background-color: $table-bg-accent;
+  }
+  tbody > tr.tr-hidden {
+    background-color: $white;  
+  }
+}
+
+.table-grow-1 { // Only for use with non-accordion tables
+  > tbody,
+  > thead {
+    > tr:not(.tr-hidden) {
+      > th,
+      > td {
+        white-space: nowrap;
+        &:nth-of-type(1) {
+          white-space: normal;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.table-grow-2 { // Only for use with non-accordion tables
+  > tbody,
+  > thead {
+    > tr:not(.tr-hidden) {
+      > th,
+      > td {
+        white-space: nowrap;
+        &:nth-of-type(2) {
+          white-space: normal;
+          width: 100%;
+        }    
+      }
+    }
+  }
+}
+
+.accordion-title { // Inner Accordion Title
+  margin-top: 0;
+}
+
+.td-link { // Make a cell into link styling
+  @extend a;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.td-link-accordion { // Adds the chevron to a cell
+  padding-right: 40px !important; // Overriding Bootstrap specificity.
+  &:before {
+    @extend .icon;
+    @extend .icon-chevron-down;
+    @extend small;
+    float: right;
+    position: relative;
+    left: 20px;
+    line-height: 1.4;
+    transition: .3s ease;
+  }
+  &.accordionCollapsed:before { // Looks for .accordion-collapsed to rotate the chevron
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+.table-striped .th-sortable { // Control the sorting color and icon positioning
+  padding-right: 40px !important; // Overriding Bootstrap specificity.
+  position: relative;
+  &:hover {
+    cursor: pointer; 
+    background-color: darken($viz-extra-light-gray, 5%);
+    transition: background-color 0.3s;
+  }
+  &.active {
+    background-color: darken($viz-extra-light-gray, 5%);
+  }
+  .icon-sort,
+  .icon-sort-asc,
+  .icon-sort-desc {
+    position: absolute;
+    right: 20px;
+    bottom: 1em;
+  }
+}
+
+.table-condensed .th-sortable {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// Table column widths
+$table-column-widths:
+(
+  30: 30px,
+  40: 40px,
+  50: 50px,
+  60: 60px,
+  70: 70px,
+  80: 80px,
+  90: 90px,
+  100: 100px,
+  110: 110px,
+  120: 120px,
+  140: 140px,
+  160: 160px,
+  180: 180px,
+  200: 200px,
+  220: 220px,
+  240: 240px,
+  260: 260px,
+  280: 280px,
+  300: 300px,
+  320: 320px,
+  340: 340px,
+  360: 360px,
+  380: 380px,
+  400: 400px
+  );
+
+@each $key, $value in $table-column-widths {
+  .tcolwidth-#{$key} {
+    width: #{$value} !important;
+  }
+}
+
+// Needed to stripe accordion tables
+.table-striped.table-hover > tbody > tr:hover {
+  background-color: lighten($viz-yellow, 35%);
+  transition: background-color 0.3s;
+  &.tr-hidden {
+    background-color: transparent;
+    transition: background-color 0;
+  }
+}
+
+/**
+ * Table controls: for delete buttons
+ */
+ .control-bar{
+  margin-bottom: 5px;
+  .btn, .alert{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: 39px;
+  }
+  .alert{
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Selected 
+ */
+ .table{
+  tr.tr-selected{
+    background-color: #FFF6E1 !important;
+  }
+
+  .td-alert{
+    border-color: transparent;
+    text-align: center;
+    padding-top: $space-sm;
+    padding-bottom: $space-sm;
+  }
+  .td-alert-warning{
+    background-color: $alert-warning-bg;
+    color: $alert-warning-text;
+  }
+  .td-alert-success{
+    background-color: $alert-success-bg;
+    color: $alert-success-text;
+  }
+  .td-alert-info{
+    background-color: $alert-info-bg;
+    color: $alert-info-text;
+  }
+  .td-alert-danger{
+    background-color: $alert-danger-bg;
+    color: $alert-danger-text;
+  }
+  .is-deleted{
+    display: none;
+  }
+}
+.table-reference-wrap {
+  overflow-x: scroll;
+  .table-reference {
+    width: 1382px;
+  }
+}
+
+.table-reference { //Tables reference styles
+  border: 1px solid gainsboro;
+  .td-cb {
+    text-align: center;
+    width: 45px;  
+  }
+  thead {
+    tr {
+      th {
+        padding: 11px 15px;
+        .icon {
+          margin-left: 10px;
+        }
+      }
+      .th-sortable {
+        position: relative;
+        padding-right: 22px!important;
+        &:hover {
+          cursor: pointer;
+          background-color: #e9e9e9;
+          transition: background-color 0.3s;
+        }
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        padding: 11px 15px;
+        .icon {
+          margin-left: 10px;
+        }
+      }
+      .th-sortable {
+
+        padding-right: 22px!important;
+      }
+    }
+  }
+}  
+
+.table-reference .th-sortable .icon-sort,
+.table-reference .th-sortable .icon-sort-asc,
+.table-reference .th-sortable .icon-sort-desc {
+  right: 10px;
+  position: absolute;
+  bottom: 1.1em;
+}
+
+.table-status-bar { //set color of status bar
+  padding: 3px 7px;
+  border-radius: 3px;
+  font-weight: 400;
+  text-align: center;
+  display: block;
+  &.pendin {
+    background-color: #FFD980;
+    color: #6b5113;
+  }
+  &.recieved {
+    background-color: #D8F29B;
+    color: #557311;
+  }
+  &.canceled {
+    background-color: #FFC4C4;
+    color: #FF0000;
+
+  }
+}  
+
+.table-comparison { //Tables comparison styles
+  width: 100%;
+  border: 1px solid gainsboro;
+  thead{
+    tr{
+      th+th{
+        width: 22.8%;
+      }
+      th {
+        padding: 13px 15px;
+        background-color: whitesmoke;
+      }
+    }
+  }
+  tbody {
+    tr{
+      td{
+        padding: 11px 15px;
+        border-top: 1px solid #dcdcdc;
+        &:first-child {
+          background-color: whitesmoke;
+        }
+      }
+    }
+  }
+  .icon.icon-star {
+    color: #FCDB00;
+    font-size: 19px;
+    margin-right: 8px;
+  }
+  .icon.icon-check {
+    color: #9CD020;
+    font-size: 19px;
+  }
+}
+.table-comparison > tbody tr:not(.tr-subtotals) > td:not(:last-of-type), .table-choice > tbody tr:not(.tr-subtotals) > td:not(:last-of-type),.table-choice > thead tr:not(.tr-subtotals) > th:not(:last-of-type),.table-reference > thead tr:not(.tr-subtotals) > th:not(:last-of-type), .table-comparison > thead tr:not(.tr-subtotals) > th:not(:last-of-type) {
+  border-right: 1px solid #dcdcdc;
+} 
+
+.table-choice { //table choice styles
+  border: 1px solid gainsboro;
+  width: 100%;
+  thead{
+    tr{
+      th {
+        padding: 13px 15px;
+      }
+      th+th{
+        width: 21.4%;
+      }
+    }
+  } 
+  tbody {
+    tr{
+      td{
+        padding: 11px 15px;
+        border-top: 1px solid #dcdcdc;
+      }
+    }
+  }     
+}
+.table-choice > thead tr:not(.tr-subtotals),.table-choice > tbody:nth-of-type(even) > tr,.table-reference > thead tr:not(.tr-subtotals),.table-reference > tbody:nth-of-type(even) > tr,.table-comparison > tbody:nth-of-type(even) > tr,.table-comparison > thead tr:not(.tr-subtotals) {
+  background-color: whitesmoke;
+  color: #696969;
+}
+
+@media screen and (max-width:767px) {
+  .table-comparison {
+    width: 768px;
+  }
+  .table-choice {
+    width: 768px;
+  }
+
+}

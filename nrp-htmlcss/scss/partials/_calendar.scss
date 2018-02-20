@@ -1,0 +1,264 @@
+// ---------------------------------
+// Calendar Containing Elements
+// ---------------------------------
+$desktop: 760px; //anything over 760px;
+
+@mixin media($bp) {
+  @media screen and (min-width: #{$bp}) {
+    @content;
+  }
+}
+.calendar-handler {
+  margin-bottom: 15px;
+}
+.calendar {
+  border: 1px solid $navbar-default-toggle-hover-bg;
+  width: calc(100% - 30px);
+  border-radius: 3px;
+  position: absolute;
+  display: none;
+  z-index: 20;
+  background: white;
+  @include media($desktop) {
+    width: 662px;
+  }
+  .button-row{
+    display: block;
+    margin: 1em 1em .5em 1em;
+  }
+  &.is-open{
+    display: block;
+  }
+}
+.calendar__block{
+  width: 100%;
+  padding: 1em;
+  border-bottom: 1px solid $navbar-default-toggle-hover-bg;
+  margin-bottom: 20px;
+  min-height: 220px;
+  @include media($desktop) {
+    float: left;
+    width: 330px;
+    margin-bottom: 0px;
+    & + & {
+      border-left: 1px solid $navbar-default-toggle-hover-bg;
+      &:before {
+        clear: both;
+        content: '';
+        display: table;
+        width: 100%;
+      }
+    }
+  }
+}
+// ---------------------------------
+// Calendar Title
+// ---------------------------------
+.calendar__title{
+  color: $viz-black;
+  font-weight: 300;
+}
+// ---------------------------------
+// Calendar Navigation
+// ---------------------------------
+.calendar__navigation{
+  display: none;
+  padding: 1em 0;
+  @include media($desktop) {
+    display: block;
+  }
+}
+.calendar__month{
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+  width: 5/7*100%;
+}
+.calendar__nav-item{
+  cursor: pointer;
+  display: inline-block;
+  width: 1/7*100%;
+  text-align: center;
+  font-size: 14px;
+  color: $viz-black;
+  &--first {
+    float: left;
+  }
+  &--last{
+    float: right;
+  }
+}
+// ---------------------------------
+// Calendar Dropdowns
+// ---------------------------------
+.calendar__form{
+  &:after{
+    clear: both;
+  }
+  .calendar__input__holder{
+    position: relative;
+    margin-bottom: 15px;
+    @include media($desktop) {
+      margin-bottom: 0;
+    }
+    &:before {
+      position: absolute;
+      content: '\f133';
+      font-family: FontAwesome;
+      font-size: 14px;
+      color: $viz-orange;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 60px;
+      border: 1px solid #FFA780;
+      border-radius: 0 3px 3px 0;
+      background-color: #FFDCCC;
+      z-index: 1;
+    }
+    .calendar__input{
+      color: $viz-black;
+      width: 100%;
+      position: relative;
+      padding: 11px 46px 10px 16px;
+      border: 1px solid #CFCFCF;
+      border-radius: 3px;
+      background-color: #F5F5F5;
+    }
+  }
+  select {
+    width: 100%;
+    padding: 8px;
+  }
+}
+.calendar__form-item {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 5px;
+  &--hidden-desktop{
+    display: inline-block;
+    @include media($desktop) {
+      display: none;
+    }
+  }
+  &:first-of-type{
+    @include media($desktop) {
+      margin-right:2%;
+    }
+  }
+  @include media($desktop) {
+    float:left;
+    width: 49%;
+  }
+}
+// ---------------------------------
+// Calendar Month
+// ---------------------------------
+.calendar__display{
+  display: none;
+  @include media($desktop) {
+    display: table;
+    width: 100%;
+  }
+}
+.calendar__week {
+  &> td {
+    width: 1/7*100%;
+  }
+}
+.calendar__day {
+  // height: 38px;
+  padding: 3px;
+  margin: 5px 7px;
+  text-align: center;
+  font-weight: 300;
+  &--date {
+    color: $viz-black;
+    //Date states.
+    //Only selectable items should have a cursor, and change the background color.
+    &.is-selectable{
+      cursor: pointer;
+      -webkit-transition: background-color 0.2s;
+      transition: background-color 0.2s;
+      &:hover{
+        background-color: lighten($viz-orange, 40%);
+      }
+    }
+    //when selected, make the date stand out.
+    &.is-selected {
+      border: 1px solid #FFA780;
+      border-radius: 3px;
+      background-color: #FFDCCC;
+    }
+    &.is-range {
+      // color: white;
+      background-color: rgba(255,212,204,0.3);
+      margin: 5px 0;
+    }
+    //when both selected and selectable, it shouldn't restore to default appearance.
+    &.is-selected.is-selectable:hover {
+      background-color: $viz-orange;
+      color: white;
+    }
+  }
+}
+// ---------------------------------
+// Calendar Errors
+// ---------------------------------
+.calendar__error {
+  color: red;
+  margin: 1em;
+}
+.js-calendar-range {
+  cursor: pointer;
+}
+.calendar__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  @include media($desktop) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .button-row {
+    min-width: 260px;
+    .button {
+      border: 1px solid $viz-purple;
+      min-width: 120px;
+      border-radius: 3px;
+      padding: 10px 10px 9px;
+      margin: 0 3px 6px;
+      background: $viz-purple;
+      color: $viz-white;
+      -webkit-transition: color .3s ease-in-out, background .3s ease-in-out;
+      transition: color .3s ease-in-out, background .3s ease-in-out;
+      &:hover {
+        background: $viz-white;
+        color: $viz-purple;
+      }
+    }
+    .button--cancel {
+      background: $viz-white;
+      color: $viz-purple;
+      &:hover {
+        background: $viz-purple;
+        color: $viz-white;
+      }
+    }
+  }
+}

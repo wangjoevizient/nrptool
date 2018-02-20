@@ -1,0 +1,40 @@
+@import "modules/variables";
+@import "modules/variables-bootstrap-override";
+@import "bootstrap/variables";
+@import "toolkit-web/nav";
+@import "toolkit-web/sections";
+@import "toolkit-web/footer";
+@import "toolkit-web/layout";
+@import "toolkit-web/residency-nav";
+
+.docs-ux-wrapper{
+  margin-top: 30px;
+}
+body{
+  position: relative;
+}
+
+pre code{
+  background-color: transparent !important;
+}
+//wrap list-group container for alignment on page
+.list-group-container {
+  display: flex;
+  max-width: 635px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+//wrap panels demo container for alignment on page
+.panel-demo-list-container{
+  max-width: 375px;
+}
+.panel-demo-table-container{
+  display: flex;
+  max-width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  > .panel{
+  	flex: 1;
+  }
+}

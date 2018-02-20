@@ -1,0 +1,225 @@
+/**
+ * the website main menu's style
+ */
+.docs-ux-navbar{
+  height: 72px;
+  .nav > li > a{
+    border-bottom: 4px solid transparent;
+    transition: border 200ms;
+    padding-top: 24px;
+    padding-bottom: 23px;
+    height: 72px;
+  }
+  .navbar-header{
+    padding-top: 7px;
+    img{
+      vertical-align: middle;
+    }
+    .page-name{
+      border-left: 1px solid #fff;
+      padding-left: 20px;
+      margin-left: 30px;
+      vertical-align: middle;
+    }
+  }
+
+  .navbar-toggle .icon-bar{
+    background-color: #fff;
+  }
+
+  &.nav-bar-dark{
+    background-color: $brand-primary;
+    .nav > li.active > a,
+    .nav > li > a:hover, 
+    .nav > li > a:focus{
+      background-color: $brand-primary !important;
+      border-bottom-color: #fff;
+    }
+
+    @media (max-width: $screen-sm-max){
+      height: auto;
+      .navbar-brand{
+        img{
+          height: 23px;
+        }
+      }
+      .nav > li > a{
+        background: $brand-primary;
+        height: 50px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-top: 1px solid #fff;
+      }
+      .navbar-collapse{
+        margin-left: -15px;
+        margin-right: -15px;
+        z-index: 10;
+        position: relative;
+      }
+      .navbar-nav{
+        margin-top: 0;
+      }
+    }
+  }
+
+  &.nav-bar-light{
+    background-color: transparent;
+    border-bottom: 1px solid $gray-light;
+
+    .navbar-header, .navbar-header a{
+      color: $brand-primary;
+    }
+
+    a{
+      color: #000;
+    }
+
+    .nav > li.active > a,
+    .nav > li > a:hover, 
+    .nav > li > a:focus{
+      color: #000;
+      background-color: transparent !important;
+      border-bottom-color: $gray-darker;
+    }
+  }
+}
+
+.docs-com-list{
+  list-style: none;
+  list-style-image: none;
+  list-style-position: outside;
+  padding: 0;
+  margin: 0;
+
+  > li{
+    width: 100%;
+    margin-top: 3px;
+    > a, > span{
+      @media (min-width: $screen-lg-min){
+        padding: 17px 40px 14px 30px;
+      }
+      padding: 17px 30px 14px 20px;
+      display: block;
+      position: relative;
+      background-color: $gray-light;
+      color: #000000;
+
+      &:hover, &:focus{
+        background-color: darken($gray-light, 7%);
+        text-decoration: none;
+      }
+    }
+
+    > a {
+      &:after {
+        @media (min-width: $screen-lg-min){
+          right: 20px;
+        }
+        font-family: 'FontAwesome';
+        content: "\f078";
+        position: absolute;
+        display: block;
+        color: $gray-darker;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &[aria-expanded=true]{
+        background-color: darken($gray-light, 7%);
+        :after{
+          content: "\f077";
+        }
+      }
+    }
+  }
+
+  .sub-menu{
+    list-style: none;
+    list-style-image: none;
+    list-style-position: outside;
+    padding: 0;
+    margin: 0;
+    > li {
+      margin-top: 2px;
+      > a, > span{
+        display: block;
+        padding: 15px 40px;
+        font-size: 13px;
+        color: $gray-darker;
+        background-color: $gray-lighter;
+
+        &.active,
+        &:hover,
+        &:focus{
+          color: $brand-primary;
+        }
+
+        &.disabled{
+          color: #ddd;
+          font-style: italic;
+        }
+      }
+      &.active > a{
+        color: $brand-primary;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/**
+ * in-page navigation (on the right sidebar)
+ */
+.docs-right-nav{
+  list-style: none;
+  list-style-image: none;
+  list-style-position: outside;
+  padding: 0;
+  > li {
+    padding: 10px 0;
+    > a{
+      font-size: 14px;
+      color: $gray-darker;
+      display: block;
+      padding: 0 10px;
+      border-left: 2px solid transparent;
+    }
+    &.active > a, > a:hover{
+      color: $gray-base;
+      background-color: transparent;
+    }
+    &.active > a{
+      border-left: 2px solid $gray-base;
+    }
+  }
+}
+
+.docs-affix{
+  top: 30px;
+}
+
+.docs-download-nav{
+  list-style: none;
+  list-style-image: none;
+  list-style-position: outside;
+  padding: 0;
+  margin-top: 15px;
+  > li {
+    padding: 10px 0;
+    > a{
+      padding: 0 10px;
+      &:hover{
+        background-color: transparent;
+      }
+    }
+  }
+}
+@media only screen and (max-width : 991px){
+.docs-affix.affix {
+  display: none;
+}
+.docs-com-list {
+  margin-right: -15px;
+}
+
+}

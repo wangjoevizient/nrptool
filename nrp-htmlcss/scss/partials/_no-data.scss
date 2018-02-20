@@ -1,0 +1,17 @@
+.no-results-description {
+	color:$gray-base;
+	font-weight: 400;	
+	line-height: 24px;	
+	margin-bottom: 50px;
+}
+.no-results {
+	background-color: #f0f0f0;
+	padding: 0;
+	p {
+		text-align: center;	
+		color: $viz-gray;
+		padding: 12px 0;
+		font-weight: 300;
+		margin: 0;	
+	}	
+}

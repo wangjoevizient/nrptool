@@ -1,0 +1,72 @@
+.rangeslider,
+.rangeslider__fill {
+  display: block;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.rangeslider {
+  background: #e6e6e6;
+  position: relative;
+}
+.rangeslider--horizontal {
+  height: 5px;
+  width: 100%;
+  .rangeslider__fill {
+    top: 0;
+    height: 100%;
+  }
+  .rangeslider__handle {
+    top: -8px;
+    touch-action: pan-y;
+    -ms-touch-action: pan-y;
+  }
+}
+.rangeslider--vertical {
+  width: 5px;
+  min-height: 150px;
+  max-height: 100%;
+  .rangeslider__fill {
+    bottom: 0;
+    width: 100%;
+  }
+  .rangeslider__handle {
+    left: -8px;
+    touch-action: pan-x;
+    -ms-touch-action: pan-x;
+  }
+}
+.rangeslider--disabled {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.75;
+}
+.rangeslider__fill {
+  background: $viz-orange;
+  position: absolute;
+}
+.rangeslider__handle {
+  background-color: $viz-light-gray;
+  border: 1px solid #cfcfcf;
+  cursor: pointer;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-size: 100%;
+  border-radius: 50%;
+  transition: background-color .3s ease-in-out;
+  &:active,
+  &:hover {
+    background-color: #cfcfcf;
+  }
+}
+input[type="range"]:focus + .rangeslider .rangeslider__handle {
+  -moz-box-shadow: 0 0 8px rgba(255, 0, 255, 0.9);
+  -webkit-box-shadow: 0 0 8px rgba(255, 0, 255, 0.9);
+  box-shadow: 0 0 8px rgba(255, 0, 255, 0.9);
+}
+.js-rangeslider-output {
+  text-align: center;
+}
+.range-demo {
+  max-width: 750px;
+}

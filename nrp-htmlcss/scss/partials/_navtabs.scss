@@ -1,0 +1,163 @@
+.tabs-description {
+font-weight: 400;
+color: $viz-black;
+}
+.basic-tabs-heading,.minimal-tabs-heading {
+  text-transform: uppercase;
+  color: $gray-darker;
+  font-size: 14px;
+  margin-bottom: 15px;
+  margin-top: 50px;
+}
+
+
+
+.nav-tabs {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #DCDCDC;
+  > li {
+    > a {
+      border-color: #DCDCDC;
+      background: $well-bg;
+      color: $gray-darker;
+      transition: background-color .3s;
+      font-weight: 400;
+      &:hover {
+        color: $viz-black;
+        background: #E9E9E9;
+        border:1px solid #E1E1E1;
+        border-bottom: 1px solid #DCDCDC;
+      } 
+    }
+  }
+  > li.active {
+    a:hover,
+    a:focus,
+    a {
+      border-color: #DCDCDC;
+      color: $viz-black;
+      font-weight: 400;
+    }
+  }
+}
+
+.tabs-minimal {
+  .nav-tabs,
+  &.nav-tabs {
+    > li {
+      > a,
+      > a:focus {
+        background: none;
+        border: none;
+        border-bottom: 3px solid transparent;
+        margin: 0 10px;
+        padding: 15px 0;
+        transition: border-bottom 0.3s, color 0.3s;
+        &:hover {
+          border-color: $viz-light-gray;
+          color: $viz-black;
+        }
+      }
+    }
+    > li.active {
+      > a {
+        border-color: $viz-yellow;
+        &:hover {
+          background: none;
+          border: 0;
+          border-bottom: 3px solid darken($viz-yellow, 5%);
+
+          apollo-header & {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbar-inverse {
+  border-bottom: 1px solid $viz-light-gray;
+  
+  .value-group-name a {
+    font-weight: 700;
+    color: $viz-black;
+    &:hover {
+      border-color: transparent !important;
+    }
+  }
+
+  .navbar-divider {
+    border-left: 1px solid $viz-light-gray;
+    float: left;
+    margin-right: 30px;
+    padding-top: 20px;
+    position: relative;
+    top: 20px;
+  }
+
+  .nav-tabs {
+    border-bottom: 0;
+    margin-bottom: 0;
+    > li 
+    > a, 
+    > a:focus {
+      height: $navbar-height;
+      line-height: $navbar-height/2;
+      font-size: 16px;
+      margin: 0 2em 0 0 !important;
+    }
+  }
+
+}
+
+.full-width {
+  min-width: 1200px;
+}
+
+
+.nav.nav-tabs-sm {
+  display: flex;
+  margin-bottom: 0;
+  padding: 0;
+  float: none;
+  li {
+    list-style-type: none;
+    float: none;
+    a {
+      padding: 13px 0px;
+      margin: 0 12px;
+      display: block;
+      border-bottom: 3px solid transparent;
+      transition: border 200ms;
+      color: #333;
+      font-weight: 400;
+      background-color: transparent;
+      border-left: none;
+      border-right: none;
+      border-top: none;
+      &:hover {
+        border-bottom: 3px solid #CFCFCF;
+        color: #000;
+        font-weight: 400;
+        background-color: inherit;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        
+      }
+
+    }
+    &.active a {
+      border-bottom: 3px solid orange;
+      color: #000;
+      background-color: transparent;
+      font-weight: 400; 
+      &:hover {
+      border-bottom: 3px solid orange;
+      }
+    }
+  }
+}
+
+

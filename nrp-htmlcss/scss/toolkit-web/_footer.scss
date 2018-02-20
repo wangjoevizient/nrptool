@@ -1,0 +1,32 @@
+.docs-foot-container{
+  border-top: 1px solid $gray-light;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: $gray-darker;
+  padding: 16px 0;
+
+  .docs-foot-center{
+    text-align: center;
+  }
+}
+@media only screen and (max-width : 767px){
+  .docs-foot-container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .docs-foot-container .docs-foot-center {
+    width: 100%;
+    order: 3;
+  }
+.docs-foot-container .docs-foot-leftnav a {
+  margin-right: 23px;
+}
+.docs-foot-container .docs-footer-rightnav a {
+  margin-right: 23px!important;
+}
+.docs-foot-container .docs-foot-center {
+  margin-top: 15px;
+}
+}

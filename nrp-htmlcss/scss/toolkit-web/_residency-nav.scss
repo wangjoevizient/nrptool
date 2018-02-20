@@ -1,0 +1,135 @@
+.residency-program-navigation ul {
+	display: flex;
+	margin-bottom: 0;
+	li {
+		list-style-type: none;
+		a {
+			padding: 20px;
+			display: block;
+			border-bottom: 3px solid transparent;
+			transition: border 200ms;
+			color: #333;
+			&:hover {
+				border-bottom: 3px solid orange;
+				color: #000;
+				font-weight: 700;	
+			}
+
+		}
+		.active {
+			border-bottom: 3px solid orange;
+			color: #000;
+			font-weight: 700;	
+		}
+	}
+}
+.resident-profile {
+	border-top: 1px solid #EEEEEE;
+	border-bottom: 1px solid #EEEEEE;
+	padding: 10px 0;
+	background-color: #f6f6f7;;
+	padding-left: 15px;
+	&-headline {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 25px;
+		font-size: 30px;	
+	}
+}
+
+.search-demographic-form {
+	padding: 0px 0px 20px;
+	margin: 0 15px;
+	border-bottom: 1px solid #EEEEEE;
+	.form-header {
+		display: flex;
+		justify-content: space-between;
+		font-weight: 400;
+		padding: 20px 0;
+		font-size: 16px;	
+	}
+	.form-control {
+		height: 43px;
+	}
+	.form-content {
+		display: flex;
+		justify-content: space-between;
+		label {
+			display: block;
+		}
+		.form-input-group {
+			display: flex;
+			select {
+				width: 200px;
+				margin-right: 20px;
+				&:last-child {
+					margin-right: 0;	
+				}
+			}
+		}
+		.form-program-date  {
+			input {
+				margin-right: 20px;
+				&:last-child {
+					margin-right: 0;	
+				}
+			}
+		}
+		.form-checkboxes {
+			display: flex;
+			align-items: flex-end;
+			padding-bottom: 15px;
+			label {
+				margin-bottom: -3px;
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+
+		}
+		.form-buttons {
+			display: flex;
+			align-items: flex-end;
+			button {
+				margin-right: 20px;
+				&:last-child {
+					margin-right: 0;	
+				}
+			}
+		}	
+	}
+}
+
+.search-results {
+	padding: 0 15px;
+	&-header {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		padding: 20px 0;
+		font-weight: 400;
+		font-size: 16px;		
+	}
+	&-import {
+		color: #696969;
+		position: relative;
+		display: flex;
+		flex-direction: row-reverse;
+		.icon {
+			color: #ff4e00;
+			margin-right: 10px;
+		}
+	}
+	table {
+		font-weight: 400;
+		tbody tr td {
+			padding: 17px 20px;
+		}
+		.icon-set .icon {
+			margin-right: 20px;	
+		}
+		.icon {
+			font-size: 18px;	
+		}
+
+	}
+}

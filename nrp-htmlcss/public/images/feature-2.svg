@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="90px" viewBox="0 0 90 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>tool-blur</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ToolKit-LandingPage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-536.000000, -764.000000)">
+        <g id="Group-3" transform="translate(126.000000, 761.000000)">
+            <g id="Group-10-Copy" transform="translate(410.000000, 3.000000)">
+                <g id="tool-blur">
+                    <circle id="Oval" fill="#00CC99" fill-rule="nonzero" cx="3" cy="30" r="3"></circle>
+                    <circle id="Oval" fill="#00CC99" fill-rule="nonzero" cx="30" cy="3" r="3"></circle>
+                    <circle id="Oval" fill="#00CC99" fill-rule="nonzero" cx="60" cy="3" r="3"></circle>
+                    <circle id="Oval" fill="#00CC99" fill-rule="nonzero" cx="30" cy="87" r="3"></circle>
+                    <circle id="Oval" fill="#00CC99" fill-rule="nonzero" cx="60" cy="87" r="3"></circle>
+                    <circle id="Oval" fill="#00CC99" fill-rule="nonzero" cx="3" cy="60" r="3"></circle>
+                    <circle id="Oval" fill="#00CC99" fill-rule="nonzero" cx="87" cy="30" r="3"></circle>
+                    <circle id="Oval" fill="#00CC99" fill-rule="nonzero" cx="87" cy="60" r="3"></circle>
+                    <circle id="Oval" stroke="#FF4E00" stroke-width="6" stroke-linecap="square" cx="30" cy="30" r="9"></circle>
+                    <circle id="Oval" stroke="#FF4E00" stroke-width="6" stroke-linecap="square" cx="60" cy="30" r="9"></circle>
+                    <circle id="Oval" stroke="#FF4E00" stroke-width="6" stroke-linecap="square" cx="30" cy="60" r="9"></circle>
+                    <circle id="Oval" stroke="#FF4E00" stroke-width="6" stroke-linecap="square" cx="60" cy="60" r="9"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

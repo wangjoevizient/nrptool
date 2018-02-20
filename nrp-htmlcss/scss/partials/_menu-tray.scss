@@ -1,0 +1,44 @@
+.demo-menu-tray {
+  max-height: 700px;
+  overflow: hidden;
+}
+.menu-tray-holder {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  background: $viz-gray;
+  color: $viz-white;
+  height: 100vh;
+  .close {
+    top: 14px;
+    right: 17px;
+    color: $viz-white;
+    opacity: 1;
+    font-weight: 400;
+    text-shadow: none;
+    -webkit-transition: color .3s ease-in-out;
+    transition: color .3s ease-in-out;
+    &:hover {
+      color: $viz-light-gray;
+    }
+  } 
+  .menu-tray {
+    list-style: none;
+    padding: 31px 0;
+    margin: 0;
+    li {
+      width: 230px;
+      a {
+        display: block;
+        padding: 8px 24px 7px;
+        color: $viz-white;
+        -webkit-transition: color .3s ease-in-out, background .3s ease-in-out;
+        transition: color .3s ease-in-out, background .3s ease-in-out;
+        &:hover {
+          background: $viz-light-gray;
+          color: $viz-orange;
+        }
+      }
+    }
+  }
+}

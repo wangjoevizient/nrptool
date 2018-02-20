@@ -1,0 +1,34 @@
+.wf-loading:not(.wf-active) * {
+  //hide flash of unstyled text
+  color: transparent !important;
+}
+
+::selection {
+  color: white;
+  background: $brand-success;
+}
+
+body {
+  font-weight: 300;
+}
+
+.number {
+  @extend .lead !optional;
+  font-weight: $headings-font-weight;
+}
+
+a:focus,
+a:hover {
+  outline: none !important;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+/**
+ * Additional text color
+ */
+.text-secondary{
+
+  color: $viz-purple !important;
+}
+.bg-secondary{
+  background-color: $viz-purple !important;
+}

@@ -1,0 +1,37 @@
+// Subheader Nav
+.nav a {
+	font-family: 'Soleto Light', san-serif;
+	color: #696969;
+}
+.navbar {
+	margin-bottom: 0px !important;
+	border-bottom: 0px !important;
+}
+.navbar .nav > li > a {
+	color: #696969;
+	border-bottom: 3px solid transparent;
+}
+.navbar .nav > li > a:hover {
+	color: #000000;
+	background-color: #FFFFFF;
+	text-decoration: none;
+	border-bottom: 3px solid #FFC02E;
+}
+
+.navbar-nav li.current-menu-item {
+	font-family: 'Soleto Bold', san-serif;
+	color: #000000;
+	background-color: #FFFFFF;
+	border-bottom: 3px solid #FFC02E;
+}
+.navbar .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	background-color: #FFFFFF;
+	color: #000000;
+}
+.navbar-toggle .icon-bar {
+	background-color: #FF4E00;
+}
+.navbar-toggle.navbar-left {
+	float: left;
+	margin-left: 10px;
+}

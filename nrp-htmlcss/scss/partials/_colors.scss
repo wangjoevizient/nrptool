@@ -1,0 +1,66 @@
+.color-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  &.big-color-list {
+    li {
+      .color {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  }
+  li {
+    display: inline-block;
+    vertical-align: top;
+    width: 160px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    .color {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      &.viz-white {
+        border: 1px solid $viz-light-gray-second;
+      }
+    }
+    span {
+      display: block;
+      color: #000;
+    }
+    .color-code {
+      color: #333;
+    }
+  }
+}
+.viz-white {
+  background: $viz-white;
+}
+.viz-orange {
+  background: $viz-orange;
+}
+.viz-yellow {
+  background: $viz-yellow;
+}
+.viz-green {
+  background: $viz-green;
+}
+.viz-purple {
+  background: $viz-purple;
+}
+.viz-blue {
+  background: $viz-blue;
+}
+.viz-gray {
+  background: $viz-gray;
+}
+.viz-black {
+  background: $viz-black;
+}
+.viz-light-gray {
+  background: $viz-light-gray;
+}
+.viz-extra-light-gray {
+  background: $viz-extra-light-gray;
+}

@@ -1,0 +1,18 @@
+.bars-high {
+  @extend .icon;
+  @extend .icon-bars;
+  color: $brand-primary;
+  height: .85em;
+  margin-right: .4em;
+  overflow: hidden;
+}
+
+.bars-med {
+  @extend .bars-high;
+  height: .7em;
+}
+
+.bars-low {
+  @extend .bars-high;
+  height: .35em;
+}

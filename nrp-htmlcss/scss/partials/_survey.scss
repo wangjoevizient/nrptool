@@ -1,0 +1,172 @@
+// Surveys
+.survey-width {
+	margin: auto;
+	max-width: 900px;
+}
+.survey-disabled {
+	color: $viz-light-gray;
+	button {
+		@extend .disabled;
+	}
+}
+.survey-landing-name {
+	height: 70px;
+}
+.horiz-divider {
+	@extend .padding-md-left;
+	@extend .padding-md-right;
+	@extend .border-top-light-gray;
+}
+.description-bold {
+	color: $viz-gray;
+	font-family: 'Soleto Bold', san-serif;
+}
+.open-survey {
+	border-left: solid 5px $viz-orange;
+}
+.float-left {
+	float: left;
+}
+.schedule-divider {
+	height: 10vh;
+	@extend .float-left;
+	@extend .padding-lg-top; 
+	@extend .padding-lg-bottom; 
+	@extend .padding-sm; 
+	@extend .margin-md-top; 
+	@extend .margin-md-left;
+	@extend .border-left-gray;
+}
+.radio-selection {
+text-align: center !important;
+width: 90px !important;
+display: table-cell !important;
+vertical-align: middle !important;
+}
+.radio, .checkbox {
+	margin-bottom: 20px;
+}
+.surv-radio-hdr {
+	width: 103px;
+}
+.bg-white {
+	background-color: white;
+}
+/* Desktop Radio Button Alignment */
+.survey-radio radio {
+   display: inline-block;
+    vertical-align: top;
+	padding: 30px;
+}
+.viz-orange {
+	color: $viz-orange;
+}
+.icon-submitted {
+  	position: relative;
+  	padding-left: 25px;
+}
+.icon-missed {
+  	position: relative;
+  	padding-left: 25px;
+}
+.icon-open {
+  	position: relative;
+  	padding-left: 25px;
+}
+.icon-na {
+  	position: relative;
+  	padding-left: 25px;
+}
+.icon-submitted:before {
+	content: '\f058';
+	color: $viz-green;
+  	font-family: fontAwesome;
+	font-size: 20px;
+  	position: absolute;
+  	left: 0;
+  	top: -4px;
+}
+.icon-missed:before {
+	content: '\f057';
+	color: $brand-danger;
+  	font-family: fontAwesome;
+	font-size: 20px;
+  	position: absolute;
+  	left: 0;
+  	top: -4px;
+}
+.icon-open:before {
+	content: '\f055';
+	color: $brand-warning;
+  	font-family: fontAwesome;
+	font-size: 20px;
+  	position: absolute;
+  	left: 0;
+  	top: -4px;
+}
+.icon-na:before {
+	content: '\f056';
+	color: $viz-light-gray;
+  	font-family: fontAwesome;
+	font-size: 20px;
+  	position: absolute;
+  	left: 0;
+  	top: -4px;
+}
+.modal-backdrop {
+  z-index: 0;
+}
+.progress-fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+.progress-fill img {
+    flex-shrink: 0;
+    min-width: 100%;
+}
+.key {
+	font-family: 'Soleto Bold', san-serif;
+	font-size: 12px;
+	color: $viz-gray;
+}
+@media screen and (max-width: 767px) {
+.mobile-visible {
+	display: block !important;
+}
+		.date-margin-top {
+	margin-top: 10px !important;
+}
+}
+@media screen and (min-width: 769px) {
+.mobile-invisible {
+	display: none !important;
+}
+}
+@media screen and (max-width: 767px) {
+.desktop-invisible {
+	display: none !important;
+}
+}
+// Sticky Section
+#sticky {
+    display: none;
+    background-color: #546bcb;
+    height: 70px;
+}
+#sticky.fixed {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.table-noborder {
+	border: 0px !important;
+}
+.table-noborder {
+	border-bottom: 0px !important;
+}
+.table-noborder th, .table-noborder td {
+    border: 0px !important;
+}

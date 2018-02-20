@@ -1,0 +1,139 @@
+// Main Header Styles
+.vizhdr, .viz-app-name, .viz-hdr-right-menu i {
+	color: #FFFFFF;
+}
+.vizhdr {
+	background-color: #FF4E00;
+}
+.viz-logo, .viz-app-name {
+	height: 20px;
+	display: inline-block;
+	float: left;
+}
+.viz-logo {
+	width: 100%;
+	height: 40px;
+	text-align: center;
+}
+.viz-logo, .viz-app-name, .viz-right-hdr-menu, .viz-logo img {
+	height: 30px;
+}
+.viz-app-name {
+	font-family: 'Soleto Light', sans-serif;
+	font-size: 16px;
+	border-left: 1px solid #CA4300;
+	padding-top: 3px;
+	margin-left: 20px;
+}
+.viz-hdr-right-menu i {
+	margin: 7px 5px 0 30px;
+}
+.viz-hdr-right-menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+}
+.viz-hdr-right-menu li {
+	float: left;
+}
+.viz-hdr-right-menu li a {
+	display: block;
+	color: #000000;
+	text-align: right;
+	text-decoration: none;
+}
+.viz-hdr-right-menu li a:hover {
+	color: #F5F5F5;
+}
+.vizsubhdr {
+	background-color: #FFFFFF;
+	padding: 15px;
+}
+.viz-hdr-right-menu i {
+	margin: 20px;
+}
+.viz-right-hdr-menu {
+	width: 100%;
+	text-align: center;
+}
+.viz-hdr-right-menu li {
+	float: left;
+}
+.viz-hdr-right-menu li a {
+	display: block;
+	color: #000000;
+	text-align: center;
+	text-decoration: none;
+}
+@media screen and (min-width: 760px) {
+.viz-logo {
+	width: 121px;
+	margin-left: 15px;
+}
+}
+
+@media screen and (min-width: 760px) {
+.viz-right-hdr-menu {
+	width: 200px;
+	margin: auto;
+}
+.viz-hdr-right-menu i {
+	margin: 7px 5px 0 30px;
+}
+.viz-hdr-right-menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+}
+.viz-hdr-right-menu li {
+	float: left;
+}
+.viz-hdr-right-menu li a {
+	display: block;
+	color: #000000;
+	text-align: right;
+	text-decoration: none;
+}
+.viz-hdr-right-menu li a:hover {
+	color: #F5F5F5;
+}
+}
+
+// Nav Bar
+.nav a {
+	font-family: 'Soleto Light', san-serif;
+	font-size: 18px;
+	color: #696969;
+}
+.navbar {
+	margin-bottom: 0px !important;
+	border-bottom: 0px !important;
+}
+.navbar .nav > li > a {
+	color: #696969;
+	border-bottom: 3px solid transparent;
+	padding: 20px 0 14px 0; 
+	margin-right: 40px;
+}
+.navbar .nav > li > a:hover {
+	color: #000000;
+	text-decoration: none;
+	border-bottom: 3px solid $viz-light-gray;
+}
+.navbar .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	background-color: #FFFFFF;
+	color: #000000;
+}
+.navbar .nav > li > a.active {
+	color: #000000;
+	text-decoration: none;
+	border-bottom: 3px solid $viz-yellow;
+}
+.navbar-toggle .icon-bar {
+	background-color: #FF4E00;
+}
+.navbar-toggle.navbar-left {
+	float: left;
+}

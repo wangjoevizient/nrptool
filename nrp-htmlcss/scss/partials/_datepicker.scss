@@ -1,0 +1,88 @@
+body { // Needed to overwrite bootstraps styles
+  .glyphicon {
+    @extend .icon;
+  }
+
+  .glyphicon-chevron-right {
+    @extend .icon-chevron-right;
+  }
+
+  .glyphicon-chevron-left {
+    @extend .icon-chevron-left;
+  } 
+}
+
+ul[uib-datepicker-popup-wrap] {
+  padding: 10px;
+  background-color: $white;
+  
+  .btn {
+    background-color: $white;
+    border: 0;
+    color: $text-color;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s;
+    
+    &.active {
+      background-color: $viz-orange;
+      box-shadow: none;
+      color: $white;  
+
+      // have to override specific element state events; see _buttons.scss: $(.btn.btn-default)
+      &:active:focus,
+      &:hover {
+        background-color: $viz-orange;
+      }
+
+      .text-info {
+        color: $white;
+      }
+    }
+
+    // have to override specific element state events; see _buttons.scss: $(.btn.btn-default)
+    &:active:focus,
+    &:hover {
+      background-color: $viz-light-orange;
+    }
+
+    .text-info {
+      color: $text-color;
+    } 
+  }
+  
+  thead {
+    .btn {
+      // correct odd spacing for first & last columns
+      &.pull-left,
+      &.pull-right {
+        padding: 5px 10px;
+      }
+
+      // disable hovering / clicking effects for calendar header
+      &:active:focus,
+      &:hover {
+        background-color: $white;
+        box-shadow: none;
+      }
+    }
+  }  
+
+  tbody {
+    // calendar days are .btn-sm, months and years are just .btn
+    .btn-sm {
+      border-radius: 50%;
+      height: 40px;
+      padding: 0;
+      width: 40px;
+    }
+  }
+
+  th {
+    vertical-align: middle;
+  }
+
+  table:focus {
+    outline-width: 0;
+  }
+}

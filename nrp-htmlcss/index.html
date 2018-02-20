@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vizient • UI/UX Toolbox</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="author" content="Vizient Inc">
+<meta name="keywords" content="Vizient">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="apple-touch-icon" sizes="57x57" href="public/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="public/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="public/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="public/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="public/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="public/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="public/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="public/favicon/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="public/favicon/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="public/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="public/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="public/favicon/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="public/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="public/favicon/manifest.json">
+<link rel="mask-icon" href="public/favicon/safari-pinned-tab.svg">
+<meta name="msapplication-TileColor" content="#DA532C">
+<meta name="msapplication-TileImage" content="public/favicon/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- Syntax highlight-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+<!-- Font awesome-->
+<link rel="stylesheet" href="public/css/font-awesome.css">
+<!-- Main Styles-->
+<link rel="stylesheet" type="text/css" href="public/css/vizient-ux-toolkit.css">
+<!-- Style Guide style-->
+<link rel="stylesheet" type="text/css" href="public/css/vizient-toolkit-web.css">
+<!-- Apollo Styles-->
+<!-- <link rel="stylesheet" type="text/css" href="css/apollo-framework.css">-->
+<!-- Font Awesome-->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body data-spy="scroll" data-target="#scrollspy">
+<header class="nav-bar docs-ux-navbar nav-bar-dark">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button class="collapsed navbar-toggle" aria-controls="viz-navbar" aria-expanded="false" data-target="#viz-navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+      <span class="navbar-brand"><a href="index.html"><img src="public/images/logo-white.svg" alt="Vizient"></a><span class="page-name hidden-xs hidden-sm">Nurse Residency Program Admin Tool</span></span> </div>
+    <div class="collapse navbar-collapse" id="viz-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="buttons.html">Hi, User Name</a></li>
+        <li><a target="_blank" href="https://github.com/greycats/vizient">Great State Mdedical Center <i class="fa fa-caret-down fa-lg padding-sm-left" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+<div class="container-fluid padding-md">
+  <section>
+    <ul class="nav nav-tabs nav-tabs-sm">
+      <li class="active"><a href="#">Manage Residents</a></li>
+      <li><a href="#">Survey Status</a></li>
+      <li><a href="#">Access Report</a></li>
+      <li><a href="#">Manage Org Profile</a></li>
+      <li><a href="#">Data Download</a></li>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">NRP Home</a></li>
+      <li><a href="#">Vizient Admin</a></li>
+    </ul>
+  </section>
+</div>
+<hr>
+<div class="container-fluid padding-lg-left">
+  <section>
+    <div class="padding-md-top pull-left">
+      <h5>Residents</h5>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-md-4 padding-sm">
+      <button class="btn btn-primary btn-lg padding-md margin-xs"> Add New Resident</button>
+      <button class="btn btn-secondary btn-lg padding-md margin-xs"> Bulk Upload </button>
+    </div>
+  </section>
+</div>
+<hr>
+<div class="container-fluid padding-lg-left padding-md-bottom">
+  <section>
+    <div class="pull-left">
+      <form>
+        <div class="search-holder search-gray">
+          <input class="search-input" type="text" placeholder="Search">
+          <button class="search-submit fa fa-search" type="submit"></button>
+        </div>
+      </form>
+    </div>
+    <!-- Entry Count -->
+    <div class="col-xs-12 col-lg-2 padding-md"> <span>1</span>-<span>10</span> of <span>50</span> entries </div>
+    <!-- /Entry Count --> 
+    <!-- Filter Buttons -->
+    <div class="pull-right col-xs-12 col-sm-12 col-md-6 col-lg-4  text-right no-padding">
+      <button class="btn btn-secondary margin-xs"><i class="fa fa-filter padding-xs-right" aria-hidden="true"></i> Filters </button>
+      <button class="btn btn-secondary margin-xs"> <i class="fa fa-columns padding-xs-right" aria-hidden="true"></i> Edit Columns </button>
+      <button class="btn btn-secondary margin-xs"> <i class="fa fa-share-square-o padding-xs-right" aria-hidden="true"></i> Export </button>
+    </div>
+    <!-- /Filter Buttons --> 
+  </section>
+</div>
+<div class="container-fluid">
+  <section class="">
+    <div class="table-responsive">
+      <table class="table table-hover table-reference">
+        <thead>
+          <tr>
+            <th class="th-sortable text-center tcolwidth-30"> RNID <span class="icon icon-sort"></span> </th>
+            <th class="th-sortable tcolwidth-30"> Cohort Date <span class="icon icon-sort"></span> </th>
+            <th class="th-sortable tcolwidth-50"> First Name <span class="icon icon-sort"></span> </th>
+            <th class="th-sortable tcolwidth-40"> Last Name <span class="icon icon-sort"></span> </th>
+            <th class="th-sortable tcolwidth-140"> Unit <span class="icon icon-sort"></span> </th>
+            <th class="th-sortable tcolwidth-40"> Leave <span class="icon icon-sort"></span> </th>
+            <th class="th-sortable tcolwidth-40"> Terminate <span class="icon icon-sort"></span> </th>
+            <th class="th-sortable tcolwidth-40"> </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td> 123456789 </td>
+            <td class="td-link td-link-accordion"> 01/02/2018 </td>
+            <td>John</td>
+            <td>Doe</td>
+            <td> Medical/Surgical ICU Inpatient Unit </td>
+            <td> No </td>
+            <td> Yes </td>
+            <td><i class="fa fa-pencil" aria-hidden="true"></i> Edit </td>
+          </tr>
+          <tr>
+            <td> 123456789 </td>
+            <td class="td-link td-link-accordion"> 01/02/2018 </td>
+            <td>John</td>
+            <td>Doe</td>
+            <td> Medical/Surgical ICU Inpatient Unit </td>
+            <td> No </td>
+            <td> Yes </td>
+            <td><i class="fa fa-pencil" aria-hidden="true"></i> Edit </td>
+          </tr>
+          <tr>
+            <td> 123456789 </td>
+            <td class="td-link td-link-accordion"> 01/02/2018 </td>
+            <td>John</td>
+            <td>Doe</td>
+            <td> Medical/Surgical ICU Inpatient Unit </td>
+            <td> No </td>
+            <td> Yes </td>
+            <td><i class="fa fa-pencil" aria-hidden="true"></i> Edit </td>
+          </tr>
+          <tr>
+            <td> 123456789 </td>
+            <td class="td-link td-link-accordion"> 01/02/2018 </td>
+            <td>John</td>
+            <td>Doe</td>
+            <td> Medical/Surgical ICU Inpatient Unit </td>
+            <td> No </td>
+            <td> Yes </td>
+            <td><i class="fa fa-pencil" aria-hidden="true"></i> Edit </td>
+          </tr>
+          <tr>
+            <td> 123456789 </td>
+            <td class="td-link td-link-accordion"> 01/02/2018 </td>
+            <td>John</td>
+            <td>Doe</td>
+            <td> Medical/Surgical ICU Inpatient Unit </td>
+            <td> No </td>
+            <td> Yes </td>
+            <td><i class="fa fa-pencil" aria-hidden="true"></i> Edit </td>
+          </tr>
+          <tr>
+            <td> 123456789 </td>
+            <td class="td-link td-link-accordion"> 01/02/2018 </td>
+            <td>John</td>
+            <td>Doe</td>
+            <td> Medical/Surgical ICU Inpatient Unit </td>
+            <td> No </td>
+            <td> Yes </td>
+            <td><i class="fa fa-pencil" aria-hidden="true"></i> Edit </td>
+          </tr>
+          <tr>
+            <td> 123456789 </td>
+            <td class="td-link td-link-accordion"> 01/02/2018 </td>
+            <td>John</td>
+            <td>Doe</td>
+            <td> Medical/Surgical ICU Inpatient Unit </td>
+            <td> No </td>
+            <td> Yes </td>
+            <td><i class="fa fa-pencil" aria-hidden="true"></i> Edit </td>
+          </tr>
+          <tr>
+            <td> 123456789 </td>
+            <td class="td-link td-link-accordion"> 01/02/2018 </td>
+            <td>John</td>
+            <td>Doe</td>
+            <td> Medical/Surgical ICU Inpatient Unit </td>
+            <td> No </td>
+            <td> Yes </td>
+            <td><i class="fa fa-pencil" aria-hidden="true"></i> Edit </td>
+          </tr>
+          <tr>
+            <td> 123456789 </td>
+            <td class="td-link td-link-accordion"> 01/02/2018 </td>
+            <td>John</td>
+            <td>Doe</td>
+            <td> Medical/Surgical ICU Inpatient Unit </td>
+            <td> No </td>
+            <td> Yes </td>
+            <td><i class="fa fa-pencil" aria-hidden="true"></i> Edit </td>
+          </tr>
+          <tr>
+            <td> 123456789 </td>
+            <td class="td-link td-link-accordion"> 01/02/2018 </td>
+            <td>John</td>
+            <td>Doe</td>
+            <td> Medical/Surgical ICU Inpatient Unit </td>
+            <td> No </td>
+            <td> Yes </td>
+            <td><i class="fa fa-pencil" aria-hidden="true"></i> Edit </td>
+          </tr>
+          <tr>
+            <td> 123456789 </td>
+            <td class="td-link td-link-accordion"> 01/02/2018 </td>
+            <td>John</td>
+            <td>Doe</td>
+            <td> Medical/Surgical ICU Inpatient Unit </td>
+            <td> No </td>
+            <td> Yes </td>
+            <td><i class="fa fa-pencil" aria-hidden="true"></i> Edit </td>
+          </tr>
+          <tr>
+            <td> 123456789 </td>
+            <td class="td-link td-link-accordion"> 01/02/2018 </td>
+            <td>John</td>
+            <td>Doe</td>
+            <td> Medical/Surgical ICU Inpatient Unit </td>
+            <td> No </td>
+            <td> Yes </td>
+            <td><i class="fa fa-pencil" aria-hidden="true"></i> Edit </td>
+          </tr>
+          <tr>
+            <td> 123456789 </td>
+            <td class="td-link td-link-accordion"> 01/02/2018 </td>
+            <td>John</td>
+            <td>Doe</td>
+            <td> Medical/Surgical ICU Inpatient Unit </td>
+            <td> No </td>
+            <td> Yes </td>
+            <td><i class="fa fa-pencil" aria-hidden="true"></i> Edit </td>
+          </tr>
+          <tr>
+            <td> 123456789 </td>
+            <td class="td-link td-link-accordion"> 01/02/2018 </td>
+            <td>John</td>
+            <td>Doe</td>
+            <td> Medical/Surgical ICU Inpatient Unit </td>
+            <td> No </td>
+            <td> Yes </td>
+            <td><i class="fa fa-pencil" aria-hidden="true"></i> Edit </td>
+          </tr>
+          <tr>
+            <td> 123456789 </td>
+            <td class="td-link td-link-accordion"> 01/02/2018 </td>
+            <td>John</td>
+            <td>Doe</td>
+            <td> Medical/Surgical ICU Inpatient Unit </td>
+            <td> No </td>
+            <td> Yes </td>
+            <td><i class="fa fa-pencil" aria-hidden="true"></i> Edit </td>
+          </tr>
+          <tr>
+            <td> 123456789 </td>
+            <td class="td-link td-link-accordion"> 01/02/2018 </td>
+            <td>John</td>
+            <td>Doe</td>
+            <td> Medical/Surgical ICU Inpatient Unit </td>
+            <td> No </td>
+            <td> Yes </td>
+            <td><i class="fa fa-pencil" aria-hidden="true"></i> Edit </td>
+          </tr>
+          <tr>
+            <td> 123456789 </td>
+            <td class="td-link td-link-accordion"> 01/02/2018 </td>
+            <td>John</td>
+            <td>Doe</td>
+            <td> Medical/Surgical ICU Inpatient Unit </td>
+            <td> No </td>
+            <td> Yes </td>
+            <td><i class="fa fa-pencil" aria-hidden="true"></i> Edit </td>
+          </tr>
+          <tr>
+            <td> 123456789 </td>
+            <td class="td-link td-link-accordion"> 01/02/2018 </td>
+            <td>John</td>
+            <td>Doe</td>
+            <td> Medical/Surgical ICU Inpatient Unit </td>
+            <td> No </td>
+            <td> Yes </td>
+            <td><i class="fa fa-pencil" aria-hidden="true"></i> Edit </td>
+          </tr>
+          <tr>
+            <td> 123456789 </td>
+            <td class="td-link td-link-accordion"> 01/02/2018 </td>
+            <td>John</td>
+            <td>Doe</td>
+            <td> Medical/Surgical ICU Inpatient Unit </td>
+            <td> No </td>
+            <td> Yes </td>
+            <td><i class="fa fa-pencil" aria-hidden="true"></i> Edit </td>
+          </tr>
+          <tr>
+            <td> 123456789 </td>
+            <td class="td-link td-link-accordion"> 01/02/2018 </td>
+            <td> John </td>
+            <td> Doe </td>
+            <td> Medical/Surgical ICU Inpatient Unit </td>
+            <td> No </td>
+            <td> Yes </td>
+            <td><i class="fa fa-pencil" aria-hidden="true"></i> Edit </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>  
+  </section>
+	
+</div>
+<footer>
+  <div class="container-fluid">
+    <div class="docs-foot-container">
+      <div class="docs-foot-leftnav"><a href="#">Contact</a></div>
+      <div class="docs-foot-center text-center">
+        <p>Application Name <br>
+          2017 iLabs + Vizient. All Rights Reserved</p>
+      </div>
+      <div class="docs-footer-rightnav"><a class="margin-sm-right" href="#">Vizient</a><a href="#">Additional Brand</a></div>
+    </div>
+  </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script> 
+<script src="https://code.highcharts.com/highcharts.js"></script> 
+<script src="https://code.highcharts.com/highcharts-more.js"></script> 
+<script src="https://code.highcharts.com/modules/exporting.js"></script> 
+<script src="public/js/components.js"></script> 
+<script src="public/js/toolkit-web.js"></script>
+</body>
+</html>

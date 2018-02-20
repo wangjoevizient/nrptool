@@ -1,0 +1,54 @@
+apollo-vha-header, [apollo-vha-header] {
+  
+  $vha-header-height: 74px;
+
+  .navbar {
+    margin-bottom: 0;
+    border-color: transparent;
+    .navbar-nav > li > a {
+      height: $vha-header-height;
+      line-height: $vha-header-height/2;
+    }
+  }
+
+  .app-name {
+    border-left: 1px solid darken($viz-orange, 10%);
+    color: white;
+    font-size: 18px;
+    float: left;
+    margin-top: 26px;
+  }
+
+  .wordmark {
+    float: left;
+    height: 28px;
+    margin: 22px;
+    margin-left: 0;
+  }
+
+  .open {
+    background-color: darken($link-color, 10%);
+  }
+
+  .dropdown, .help {
+    font-size: 18px;
+    width: 75px;
+    text-align: center;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($link-color, 5%) !important;
+      cursor: pointer;
+    }
+  }
+
+  .dropdown-menu {
+    border-radius: 0;
+    padding: 0;
+
+    a {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  }
+}

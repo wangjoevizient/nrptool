@@ -1,0 +1,30 @@
+// Breadcrumb
+.breadcrumbbg {
+	background-color: #F5F5F5;
+	border-bottom: 1px solid #CFCFCF;
+	font-size: 14px;
+}
+.breadcrumbs {
+	background-color: inherit;
+	padding: 0;
+	li {
+		list-style-type: none;
+		display: inline-block;
+	}
+}
+.breadcrumbs, .breadcrumbs > .active {
+	font-weight: 300;
+	font-size: 14px;
+}
+.breadcrumbs a {
+	color: #FF4E00;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+.breadcrumbs > li + li:before {
+	color: #696969;
+	font-family: 'FontAwesome';
+	content: '\f054';
+	padding: 0 10px;
+}

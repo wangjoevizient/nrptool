@@ -1,0 +1,270 @@
+section{
+  line-height: 1.5em;
+  // font-weight: 300;
+  // font-size: 16px;
+  h2{
+    margin-top: 0;
+  }
+}
+.docs-component-container {
+      width: 100%;
+    background-color: #fff;
+    padding: 0 15px;
+    margin: 0 auto;
+    transition: 1s ease;
+}
+// resizing container
+.docs-component-mobile {
+  width: 375px;
+  .docs-com-demo {
+    overflow-x: scroll;
+  }
+}
+.docs-component-tablet {
+  width: 768px;
+}
+.docs-component-desktop {
+  width: 100%;
+}
+.resizing-bg {
+  background-color: $gray-darker;
+  
+}
+// resizing container end
+.docs-component-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  h1{
+    font-size: 16px;
+    color: $gray-darker;
+  }
+}
+
+.docs-component-intro{
+  padding: 30px 0;
+  border-bottom: 1px solid $gray-lighter;
+  h2{
+    font-size: 32px;
+    font-weight: 200;
+    color: $gray-base;
+  }
+  h4{
+    margin-top: 25px;
+    font-weight: 400;
+    font-size: 16px;
+    color: $gray-base;
+  }
+}
+
+.docs-component{
+  padding: 30px 0;
+  border-bottom: 1px solid $gray-light;
+  .docs-component-heading{
+    font-size: 24px;
+    font-weight: 200;
+    color: $gray-base;
+    margin-bottom: 20px;
+  }
+}
+
+
+.docs-demo-container{
+  margin-top: 30px;
+  position: relative;
+  .btn-action{
+    background: #FFFFFF;
+    border: 1px solid #CFCFCF;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 300;
+    color: $gray-darker;
+    padding: 6px 10px;
+    display: inline-block;
+  }
+  .docs-demo-heading{
+    border-radius: 3px 3px 0 0;
+    border-style: solid;
+    border-color: #CFCFCF;
+    border-width: 1px 1px 0 1px;
+    padding: 10px;
+    text-align: right;
+    min-height: 51px;
+  }
+  pre{
+    border-radius: 0 0 3px 3px;
+    border-color: #CFCFCF;
+  }
+  .docs-demo-code{
+    overflow: hidden;
+  }
+}
+
+.docs-com-demo{
+  .btn{
+    margin-bottom: 5px;
+  }
+}
+
+/**
+ * Landing page sections
+ */ 
+.flex-md{
+  @media (min-width: $screen-md-min){
+    display: flex;
+  }
+}
+.flex-flow-md-reverse{
+  @media (min-width: $screen-md-min){
+    flex-flow: row-reverse;
+  }
+}
+.align-items-md-center{
+  @media (min-width: $screen-md-min){
+    align-items: center;
+  }
+}
+.justify-content-md-center{
+  @media (min-width: $screen-md-min){
+    justify-content: center;
+  }
+}
+.docs-sec-hero{
+  .docs-sec-hero-content{
+    line-height: 1.5;
+    max-width: 500px;
+    h1{
+      line-height: 1.3;
+      font-size: 48px;
+    }
+
+    p{
+      font-size: 16px;
+      font-weight: 300;
+      color: #28292B;
+    }
+  }
+  img{
+    max-width: 100%;
+  }
+}
+
+// features section
+.docs-sec-features-container{
+  border-top: 1px solid $gray-lighter;
+}
+
+.docs-feature-container{
+  color: $gray-base;
+  line-height: 1.5;
+  .docs-feature-thumb{
+
+  }
+  h3{
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 0;
+  }
+  p{
+    font-weight: 300;
+    font-size: 16px;
+  }
+}
+
+.docs-sec-started{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $gray-light;
+
+  .docs-guide-step{
+    color: $gray-darker;
+    h3{
+      margin-top: 40px;
+      font-size: 16px;
+      font-weight: 400;
+      color: $gray-base;
+    }
+    .docs-guide-list{
+      .icon{
+        width: 20px;
+        color: $brand-primary;
+      }
+    }
+  }
+}
+
+.docs-sec-components{
+  .docs-com-main{
+    margin-bottom: 40px;
+
+    &:before{
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .thumb{
+      width: 45px;
+      display: inline-block;
+      img{
+        max-height: 30px;
+        max-width: 30px;
+      }
+    }
+    .txt{
+      vertical-align: middle;
+      font-size: 24px;
+      font-weight: 300;;
+      color: $gray-base;
+      vertical-align: middle;
+    }
+  }
+
+  div.docs-com-item{
+    opacity: 0.3;
+  }
+
+  .docs-com-item{
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    &:before{
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .thumb{
+      width: 45px;
+      display: block;
+      img{
+        height: 24px;
+      }
+    }
+    .content{
+      display: block;
+      flex: 1;
+      .head{
+        color: $gray-base;
+        font-size: 16px;
+      }
+      .desc{
+        margin-bottom: 0;
+        color: $gray-darker;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 991px){
+.docs-com-list {
+  margin-right: -15px;
+}
+}
+@media only screen and (max-width : 767px){
+.docs-com-demo {
+  overflow-x: scroll;
+}
+
+
+}

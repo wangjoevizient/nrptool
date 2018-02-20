@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="22px" viewBox="0 0 24 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>chat</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ToolKit-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-597.000000, -310.000000)">
+        <g id="2" transform="translate(595.000000, 228.000000)" fill="#BFBFBF" fill-rule="nonzero">
+            <g id="1" transform="translate(2.000000, 69.000000)">
+                <g id="chat" transform="translate(0.000000, 13.000000)">
+                    <path d="M23,0 L1,0 C0.4,0 0,0.4 0,1 L0,16 C0,16.6 0.4,17 1,17 L7.5,17 L11.2,21.6 C11.4,21.8 11.7,22 12,22 C12.3,22 12.6,21.9 12.8,21.6 L16.5,17 L23,17 C23.6,17 24,16.6 24,16 L24,1 C24,0.4 23.6,0 23,0 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

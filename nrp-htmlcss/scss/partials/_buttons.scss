@@ -1,0 +1,344 @@
+@mixin button-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 25%);
+  }
+  &:hover {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      background-color: darken($background, 17%);
+          border-color: darken($border, 25%);
+    }
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $background;
+          border-color: $border;
+    }
+  }
+
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+// Button sizes
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+}
+
+// Bootstrap Overwrite
+.btn {
+  @include button-size(11px, 32px, $font-size-base, $line-height-base, $border-radius-base);
+  
+  transition: background 0.3s;
+
+  &:active { // BS Overwrite
+    box-shadow: none;
+  }
+}
+.btn-lg {
+  @include button-size(15px, 48px, $font-size-base, $line-height-large, $border-radius-base);
+}
+.btn-sm {
+  @include button-size($padding-small-vertical, 15px, $font-size-small, $line-height-small, $border-radius-base);
+}
+.btn-xs {
+  @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+}
+
+.btn.disabled, 
+.btn[disabled], 
+fieldset[disabled] .btn {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+.btn-bold {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .05em;
+}
+
+.btn-switch {
+  color: $viz-gray;
+  background-color: $viz-extra-light-gray;
+  border-color: $viz-light-gray;
+  font-weight: $headings-font-weight;
+  
+  &:hover{
+    color: white;
+    background-color: darken($viz-light-gray,5%);
+  }
+  
+  &.active{
+    color: white;
+    background-color: $viz-light-gray;
+    font-weight: 400;
+    box-shadow: none;
+  }
+}
+
+.btn-primary-ghost {
+  background: #ffffff;
+  border-color: lighten($viz-purple, 20%);
+  color: $viz-purple;
+
+  &:hover,
+  &:focus,
+  &.focus { // BS override
+    background: lighten($viz-purple, 40%);
+    color: $viz-purple;
+  }
+
+  &:hover:disabled {
+    color: $viz-purple;
+  }
+}
+
+.btn-invisible { // For simple icon or text when you want a larger click area
+  background-color: transparent;
+  border: none;
+  &:active,
+  &:hover {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    color: inherit;
+  }
+}
+
+.btn-secondary { // Don't use this for primary actions
+  border: 1px solid lighten($brand-primary, 25%);
+  background: lighten($brand-primary, 40%);
+  color: $brand-primary;
+
+  a {
+    color: $brand-primary;
+  }
+
+  &:hover:disabled { // BS overwrite
+    color: $brand-primary;
+  }
+  
+  &:hover,
+  &:focus,
+  &.focus { // BS overwrite
+    color: $brand-primary; 
+    background: lighten($brand-primary, 35%);
+  }
+}
+
+.btn-secondary-ghost {
+  // Naming convention for ease of use
+  @extend .btn-link;
+}
+
+.btn-muted {
+  border: 1px solid $viz-light-gray;
+  background: $color-pagination-background;
+  color: $viz-gray;
+
+  &:hover {
+    color: darken($viz-gray, 10%);
+    background: $color-pagination-background-hover;
+    text-decoration: none;
+  }
+}
+
+.btn.btn-default {
+  &:active:focus,
+  &:focus,
+  &:hover {
+    background-color: #fff;
+    border-color: $gray-light;
+  }
+}
+
+// Apollo Framework
+.btn {
+  .icon { // Position icons off of the button text
+    padding-right: .7em;
+  }
+  
+  .dropdown.dropdown-justified & {
+    padding: 6px 0px;
+  }
+
+  &:active,
+  &:focus {
+    outline: none !important;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+
+  &.dropdown-toggle.btn {
+    padding: 6px 10px;
+    text-align: left;
+    .icon-chevron-down {
+      font-size: 10px;
+      line-height: 1.7;
+      padding-left: 1em;
+      padding-right: 0;
+    }
+  }
+}
+
+.btn-icon-only { // Tighten up the spacing for a button that's only an icon
+  padding-left: 15px;
+  padding-right: 15px;
+  .icon {
+    padding: 0;
+  }
+}
+
+.atlasDropdown {
+  &.btn-block {
+    .dropdown-multiselect {
+      width: 100%;
+    }  
+    .dropdown-toggle {
+      width: 100%;
+      .icon {
+        float: right;
+        font-size: 10px;
+      }
+    }
+  } 
+  .dropdown-multiselect {
+    .facility-menu {
+      width: 360px;
+    }
+    .dropdown-menu {
+      display: block;
+    }
+  }
+}
+
+%replace-chevron {
+  width: 100%;
+  .dropdown-toggle {
+    overflow: hidden;
+    padding-right: 30px;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    .icon-chevron-down {
+      position: absolute;
+      font-size: 10px;
+      right: 10px;
+      top: 7px;
+    }
+  }
+}
+
+.btn-block {
+  .dropdown {
+    @extend %replace-chevron;
+  }
+  &.dropdown {
+    @extend %replace-chevron;
+  }
+  .facility-selector {
+    @extend %replace-chevron; 
+  }
+}
+
+.input-group {
+  .btn {
+    padding-bottom: 7px; // To line up icon buttons with input forms
+  }
+}
+
+.btn-form,
+.btn-form:hover,
+.btn-form:active,
+.btn-form:focus {
+  border: 1px solid $viz-light-gray;
+  background-color: $color-form-input-background;
+  box-shadow: none;
+  font-weight: 300;
+}
+
+.dropdown.open .dropdown-toggle {
+  box-shadow: none;
+}
+
+.dropdown-menu > li > a {
+  font-weight: 300;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -5px;
+    margin-left: 0px;
+    border-radius: 3px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #696969;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    border-radius: 3px;
+}

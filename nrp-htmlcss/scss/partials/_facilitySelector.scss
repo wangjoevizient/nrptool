@@ -1,0 +1,50 @@
+.facility-selector {
+    .facility-search {
+        position: relative;
+
+        .icon { // Position search icon
+            color: $gray-dark;
+            left: 15px;
+            line-height: 2.2;
+            position: absolute;
+        }
+
+        input { // Reset input to full width
+            box-shadow: none;
+            border: 0;
+            border-bottom: 1px solid lighten($viz-light-gray, 5%);
+            border-radius: 0;
+            padding-left: 40px;
+            width: 100%;
+
+            &:focus {
+                border: none;
+                border-bottom: 1px solid lighten($viz-light-gray, 5%);
+                box-shadow: none;
+            }
+        }
+    }
+
+    .facility-dropdown-footer {
+        border-top: 1px solid lighten($viz-light-gray, 5%);
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        a {
+            line-height: 2.4;
+        }
+    }
+
+    .dropdown-list {
+        max-height: 350px;
+        margin-bottom: 0;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+.atlasDropdown {
+  .nav-tabs {
+    margin-bottom: 0;
+  }
+}

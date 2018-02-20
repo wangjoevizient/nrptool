@@ -1,0 +1,42 @@
+.badges-list {
+  list-style-type: none;
+  padding: 0;
+  font-weight: 300;
+  margin-bottom: 40px;
+  li {
+   margin-right: 30px;
+   display: inline-block;
+   margin-bottom: 10px;
+ }
+ .btn {
+  font-weight: 300;
+}
+.icon {
+  font-weight: 300;
+}
+}	
+
+.badge {
+  color: $badge-color;
+  background-color: $badge-bg;
+  margin-left: 4px;
+  font-weight: 300;
+}
+
+.btn-primary {
+  .badge {
+    color: $btn-primary-bg;
+    background-color: $btn-primary-color;
+  }
+}
+.btn {
+	.badge {
+		margin-left: 7px;
+	}
+}
+
+.panel-default>.panel-heading .badge {
+  @extend .badge;
+  position: relative;
+  top: .2em; // Assuming use in a small right side panel heading link
+}

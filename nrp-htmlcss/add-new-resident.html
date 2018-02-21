@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vizient • UI/UX Toolbox</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="author" content="Vizient Inc">
+<meta name="keywords" content="Vizient">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="apple-touch-icon" sizes="57x57" href="public/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="public/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="public/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="public/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="public/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="public/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="public/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="public/favicon/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="public/favicon/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="public/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="public/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="public/favicon/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="public/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="public/favicon/manifest.json">
+<link rel="mask-icon" href="public/favicon/safari-pinned-tab.svg">
+<meta name="msapplication-TileColor" content="#DA532C">
+<meta name="msapplication-TileImage" content="public/favicon/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- Syntax highlight-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+<!-- Font awesome-->
+<link rel="stylesheet" href="public/css/font-awesome.css">
+<!-- Main Styles-->
+<link rel="stylesheet" type="text/css" href="public/css/vizient-ux-toolkit.css">
+<!-- Style Guide style-->
+<link rel="stylesheet" type="text/css" href="public/css/vizient-toolkit-web.css">
+<!-- Apollo Styles-->
+<!-- <link rel="stylesheet" type="text/css" href="css/apollo-framework.css">-->
+<!-- Font Awesome-->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body data-spy="scroll" data-target="#scrollspy">
+<div class="container-fluid">
+  <section>
+    <div class="pull-left padding-md-top">
+      <h5>Add New Resident</h5>
+    </div>
+  </section>
+</div>
+<hr>
+<div class="container-fluid">
+  <form>
+    <div class="container-fluid">
+  <div class="col-xs-12 col-sm-12 col-md-8">
+    <div class="col-xs-12">
+      <div class="form-group col-xs-12 col-sm-12 col-md-8 col-lg-8 padding-md-top margin-none-left">
+        <label>1. RN ID *</label>
+        <input class="form-control" type="text">
+      </div>
+    </div>
+    <!-- 2 + 3 First Name - Last Name -->
+    <div class="col-xs-12 col-sm-12 col-md-8 padding-sm-top">
+      <div class="form-group col-xs-12 col-sm-6 col-md-5">
+        <label>2. First Name *</label>
+        <input class="form-control" type="text">
+      </div>
+      <div class="form-group col-xs-12 col-sm-6 col-md-5">
+        <label>3. Last Name *</label>
+        <input class="form-control" type="text">
+      </div>
+    </div>
+    <!-- /2 + 3 First Name - Last Name --> 
+    <!-- 4 Organization Email Address -->
+    <div class="col-xs-12 padding-sm-top">
+      <div class="form-group col-xs-12 col-sm-12 col-md-8">
+        <label>4. Organization Email Address *</label>
+        <input class="form-control" type="text">
+      </div>
+    </div>
+    <!-- /4 Organization Email Address --> 
+    <!-- 5 + 6  Dates -->
+    <div class="col-xs-12 padding-sm-top">
+      <div class="form-group col-xs-12 col-sm-12 col-md-5 col-lg-3">
+        <label>5. Cohort Date *</label>
+        <div class="input-group">
+          <input type="text" class="form-control dropdown-menu-right dropdown-menu-up" />
+          <span class="input-group-btn">
+          <button class="btn btn-secondary btn-icon-only" type="button"><i class="icon icon-calendar-o"></i></button>
+          </span> </div>
+      </div>
+      <div class="form-group col-xs-12 col-sm-12 col-md-5 col-lg-3">
+        <label>6. Employment Start Date *</label>
+        <div class="input-group">
+          <input type="text" class="form-control dropdown-menu-right dropdown-menu-up" />
+          <span class="input-group-btn">
+          <button class="btn btn-secondary btn-icon-only" type="button"><i class="icon icon-calendar-o"></i></button>
+          </span> </div>
+      </div>
+    </div>
+    <!-- /5 + 6  Dates --> 
+    <!-- 7 Type of unit -->
+    <div class="col-xs-12 padding-sm-top">
+      <div class="form-group col-xs-12 col-sm-12 col-md-6">
+        <label>7. Type of unit *</label>
+        <select class="form-control" name="">
+          <option selected disabled><span>Choose type of unit</span></option>
+          <option value="01">Option 1</option>
+          <option value="02">Option 2</option>
+          <option value="03">Option 3</option>
+        </select>
+      </div>
+      <div class="form-group col-xs-12 col-sm-12 col-md-3">
+        <label>Other (Specify)</label>
+        <input class="form-control" type="text">
+      </div>
+    </div>
+    <!-- /7 Type of unit --> 
+    <!-- 8 Age in years -->
+    <div class="col-xs-12 padding-sm-top">
+      <div class="form-group col-xs-12 col-sm-12 col-md-6">
+        <label>8. Age in years (at date of hire) *</label>
+        <input class="form-control" type="text">
+      </div>
+    </div>
+    <!-- /	8 Age in years --> 
+    <!-- 9 Gender -->
+    <div class="col-xs-12 padding-sm-top">
+      <div class="form-group col-xs-12 col-sm-12 col-md-6">
+        <label>9. Gender *</label>
+        <select class="form-control" name="selectorg">
+          <option selected disabled><span>Choose gender</span></option>
+          <option value="01">Option 1</option>
+          <option value="02">Option 2</option>
+          <option value="03">Option 3</option>
+        </select>
+      </div>
+    </div>
+    <!-- /9 Gender --> 
+    <!-- 10 Ethnicity -->
+    <div class="col-xs-12 padding-sm-top">
+      <div class="form-group col-xs-12 col-sm-12 col-md-6">
+        <label>10. Ethnicity *</label>
+        <select class="form-control" name="selectorg">
+          <option selected disabled><span>Choose ethicity</span></option>
+          <option value="01">Option 1</option>
+          <option value="02">Option 2</option>
+          <option value="03">Option 3</option>
+        </select>
+      </div>
+    </div>
+    <!-- /10 Ethnicity --> 
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-2 viz-extra-light-gray">
+    <div class="padding-md bg-ex-light-gray margin-md-top">
+      <h4>Resources</h4>
+      <p><a href=""><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Resident Demographic Form</a></p>
+      <p><a href=""><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Unit Defintions</a></p>
+    </div>
+  </div>
+</div>
+  </form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script> 
+<script src="https://code.highcharts.com/highcharts.js"></script> 
+<script src="https://code.highcharts.com/highcharts-more.js"></script> 
+<script src="https://code.highcharts.com/modules/exporting.js"></script> 
+<script src="public/js/components.js"></script> 
+<script src="public/js/toolkit-web.js"></script>
+</body>
+</html>

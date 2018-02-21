@@ -161,9 +161,9 @@
 @media only screen and (max-width: 991px) {
   .docs-affix.affix {
     display: none; }
+
   .docs-com-list {
     margin-right: -15px; } }
-
 section {
   line-height: 1.5em; }
   section h2 {
@@ -280,7 +280,6 @@ section {
     font-size: 16px;
     font-weight: 300;
     color: #28292B; }
-
 .docs-sec-hero img {
   max-width: 100%; }
 
@@ -331,10 +330,8 @@ section {
     font-weight: 300;
     color: #000000;
     vertical-align: middle; }
-
 .docs-sec-components div.docs-com-item {
   opacity: 0.3; }
-
 .docs-sec-components .docs-com-item {
   margin-bottom: 40px;
   display: flex;
@@ -361,11 +358,9 @@ section {
 @media only screen and (max-width: 991px) {
   .docs-com-list {
     margin-right: -15px; } }
-
 @media only screen and (max-width: 767px) {
   .docs-com-demo {
     overflow-x: scroll; } }
-
 .docs-foot-container {
   border-top: 1px solid #EEEEEE;
   display: flex;
@@ -381,16 +376,19 @@ section {
   .docs-foot-container {
     justify-content: center;
     flex-wrap: wrap; }
+
   .docs-foot-container .docs-foot-center {
     width: 100%;
     order: 3; }
+
   .docs-foot-container .docs-foot-leftnav a {
     margin-right: 23px; }
+
   .docs-foot-container .docs-footer-rightnav a {
     margin-right: 23px !important; }
+
   .docs-foot-container .docs-foot-center {
     margin-top: 15px; } }
-
 .docs-component-header {
   border-bottom: 1px solid #EEEEEE; }
   .docs-component-header a {

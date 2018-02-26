@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Headers } from '@angular/http';
+import { Http, Response, Headers, RequestOptions,RequestMethod} from '@angular/http';
 import 'rxjs/add/operator/map'
 import { Observable } from 'rxjs/Observable';
 import { environment } from '../../environments/environment';
+import { rnInfo } from '../models/rnInfo.model';
 
 @Injectable()
 export class DataService {
@@ -53,5 +54,29 @@ export class DataService {
 					.map((response: Response) => <any>response.json());
 
 	}
+
+	public postNewResident(resi:rnInfo)
+    {    
+		console.log('saving...');
+		console.log(resi)
+
+        var body=JSON.stringify(resi);
+        var headerOptions= new Headers({'Content-Type':'application/json'});
+        var requestOption = new RequestOptions({method:RequestMethod.Post,headers:headerOptions});
+        return this._http.post(this.webapiRoot +"InsertResidentData",body,requestOption).
+        map(x=>console.log("service->"+x));
+	}
+	
+	public CheckRNIDExists = (orgid,rnid): Observable<any> => {
+		return this._http.get(this.webapiRoot + "CheckRNIDExists/"+ rnid +"/"+orgid)
+				.map((response: Response) => <any>response.json());
+			}
+
+	public ValidateOrganizationEmailAddress = (orgid,emailAddress): Observable<any> => {
+				return this._http.get(this.webapiRoot + "ValidateOrganizationEmailAddress/"+ orgid +"/"+ emailAddress)
+						.map((response: Response) => <any>response.json());
+					}
+	
+	
 
 }

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ManageResidentsComponent } from './manage-residents/manage-residents.component';
 import { SurveyStatusComponent} from './survey-status/survey-status.component';
 import { AddResidentComponent} from './add-resident/add-resident.component';
+import { ManageresidentFiltersComponent } from './manageresident-filters/manageresident-filters.component';
 
 const routes: Routes = [
 	{
@@ -20,6 +21,10 @@ const routes: Routes = [
 	{
 		path: 'survey-status',
 		component: SurveyStatusComponent
+	},
+	{
+		path: 'manage-residents-filter',
+		component: ManageresidentFiltersComponent
 	}
 ];
 

@@ -5,5 +5,6 @@
 
 export const environment = {
 	production: false,
+	//webapi_root: "http://localhost:56409/api/"
 	webapi_root: "http://nursing.dev.vizientinc.com/NRP-Admin-API/api/"
 };

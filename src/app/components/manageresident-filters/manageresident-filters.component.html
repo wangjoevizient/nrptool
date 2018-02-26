@@ -1,0 +1,157 @@
+
+
+<div data-spy="scroll" data-target="#scrollspy">
+    <md-dialog-content>
+  <div class="container-fluid">
+        <section>
+          <div class="pull-left padding-md-top">
+            <h5>Set filters</h5>
+          </div>
+          <div class="pull-right padding-lg-top"> <a href="url"><i class="fa fa-refresh" aria-hidden="true"></i> Reset to Default</a> </div>
+        </section>
+      </div>
+      <hr>
+
+  <div class="container-fluid">
+      <form>
+        <div class="container-fluid">
+          <div class="col-xs-12 border-bottom-gray margin-sm-bottom">
+            <div class="form-group col-xs-12 col-sm-6 col-md-2 col-lg-2">
+              <label>Cohort date from</label>
+              <input class="form-control" type="date" placeholder="mm/dd/yy">
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-2 col-lg-2">
+              <label>Cohort date to</label>
+              <input class="form-control" type="date" placeholder="mm/dd/yy">
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-2 col-lg-2">
+              <label>Employee date from</label>
+              <input class="form-control" type="date" placeholder="mm/dd/yy">
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-2 col-lg-2">
+              <label>Employee date to</label>
+              <input class="form-control" type="date" placeholder="mm/dd/yy">
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-2 col-lg-2">
+              <label>Type of Unit</label><br>
+              <select formControlName="typeOfUnit" required name="typeofunit" class="form-control" [(ngModel)]="selectedtypeofunit" >
+                <option selected disabled value="undefined">
+                  <span>Choose type of unit</span>
+                </option>
+                <option *ngFor="let tyu of typeofunits" [ngValue]="tyu.Code_Id">{{tyu.Code_Description}}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="col-xs-12 border-bottom-gray margin-sm-bottom">
+            <div class="form-group col-xs-12 col-sm-6 col-md-2 col-lg-2">
+              <label>Age in years (at date of hire)</label><br>
+              <select class="form-control" name="selectorg">
+                <option selected disabled><span>All</span></option>
+                <option value="01">Option 1</option>
+                <option value="02">Option 2</option>
+                <option value="03">Option 3</option>
+              </select>
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-2 col-lg-2">
+              <label>Gender</label><br>
+              <select formControlName="gender" required name="gender" class="form-control" [(ngModel)]="selectedgender" >
+                <option selected disabled value="undefined">Choose gender</option>
+                <option *ngFor="let gnd of genders" [ngValue]="gnd.Code_Id">
+                  {{gnd.Code_Description}}
+                </option>
+              </select>
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-2 col-lg-2">
+              <label>Ethnicity</label><br>
+              <select formControlName="ethnicity" required name="Ethnicity" class="form-control" [(ngModel)]="selectedEthnicity">
+                <option selected disabled value="undefined">Please select Value</option>
+                <option *ngFor="let eth of Ethnicitys" [ngValue]="eth.Code_Id">
+                  {{eth.Code_Description}}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="col-xs-12 border-bottom-gray margin-sm-bottom">
+            <div class="form-group col-xs-12 col-sm-6 col-md-2 col-lg-2">
+              <label>Degree received</label><br>
+              <select formControlName="degreeReceived" required name="DegreeReceived" class="form-control" [(ngModel)]="selectedDegreeReceived">
+            <option selected disabled value="undefined">Choose Degree</option>
+            <option *ngFor="let dgrsd of DegreeReceiveds" [ngValue]="dgrsd.Code_Id">
+              {{dgrsd.Code_Description}}
+            </option>
+          </select>
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-2 col-lg-2">
+              <label>Previous non-nursing degree</label><br>
+              <select formControlName="previousNursingDegree" required name="Previousnursingdegree" class="form-control" [(ngModel)]="selectedPreviousnursingdegree">
+            <option selected disabled value="undefined">Choose previous non-nursing degree</option>
+            <option *ngFor="let nsdg of Previousnursingdegrees" [ngValue]="nsdg.Code_Id">
+              {{nsdg.Code_Description}}
+            </option>
+          </select>
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-2 col-lg-2">
+              <label>Overall GPA</label><br>
+              <select formControlName="overallGPA" required name="OverallGPA" class="form-control" [(ngModel)]="selectedOverallGPA">
+            <option selected disabled value="undefined">Choose GPA</option>
+            <option *ngFor="let gpa of OverallGPAs" [ngValue]="gpa.Code_Id">
+              {{gpa.Code_Description}}
+            </option>
+          </select>
+            </div>
+          </div>
+          <div class="col-xs-12 border-bottom-gray margin-sm-bottom">
+            <div class="form-group col-xs-12 col-sm-6 col-md-3 col-lg-3">
+              <label>Grant NRP meeting place access</label><br>
+              <select class="form-control" name="selectorg">
+                <option selected disabled><span>All</span></option>
+                <option value="01">Option 1</option>
+                <option value="02">Option 2</option>
+                <option value="03">Option 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-xs-12 border-bottom-gray margin-sm-bottom">
+            <div class="form-group col-xs-12 col-sm-6 col-md-2 col-lg-2">
+              <label>Leave</label><br>
+              <select class="form-control" name="selectorg">
+                <option selected disabled><span>All</span></option>
+                <option value="01">Option 1</option>
+                <option value="02">Option 2</option>
+                <option value="03">Option 3</option>
+              </select>
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-2 col-lg-2">
+              <label>Termination</label><br>
+              <select class="form-control" name="selectorg">
+                <option selected disabled><span>All</span></option>
+                <option value="01">Option 1</option>
+                <option value="02">Option 2</option>
+                <option value="03">Option 3</option>
+              </select>
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-2 col-lg-2">
+              <label>Termination Reason</label><br>
+              <select class="form-control" name="selectorg">
+                <option selected disabled><span>All</span></option>
+                <option value="01">Option 1</option>
+                <option value="02">Option 2</option>
+                <option value="03">Option 3</option>
+              </select>
+            </div>
+          </div>
+        
+        </div>
+      </form>
+    </div>
+</md-dialog-content>
+<md-dialog-action>
+    <div class="container-fluid">
+        <div class="col-xs-12 text-right">
+            <button class="btn btn-primary-ghost"  (click)="onCancel()"> Cancel </button>
+            <button class="btn btn-primary" (click)="on()"> Apply Filters </button>
+      </div>
+      </div>
+</md-dialog-action>
+  </div>

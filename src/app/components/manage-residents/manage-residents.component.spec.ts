@@ -7,6 +7,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 
+
 describe('ManageResidentsComponent', () => {
   let component: ManageResidentsComponent;
   let fixture: ComponentFixture<ManageResidentsComponent>;

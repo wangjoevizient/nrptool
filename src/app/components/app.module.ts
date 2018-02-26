@@ -22,6 +22,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material'
 //Pips
 import { BooleanPipe } from '../pipes/boolean.pipe';
+import { ManageresidentFiltersComponent } from './manageresident-filters/manageresident-filters.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { BooleanPipe } from '../pipes/boolean.pipe';
     SurveyStatusComponent,
     AddResidentComponent,
 		TerminationReportComponent,
-		BooleanPipe
+		BooleanPipe,
+		ManageresidentFiltersComponent		
   ],
   imports: [
     BrowserModule,
@@ -53,6 +55,7 @@ import { BooleanPipe } from '../pipes/boolean.pipe';
 	bootstrap: [AppComponent],
 	schemas: [
     CUSTOM_ELEMENTS_SCHEMA
-  ]
+	],
+	entryComponents :[ManageresidentFiltersComponent]
 })
 export class AppModule { }

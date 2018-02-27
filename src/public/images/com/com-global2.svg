@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>road</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ToolKit-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1007.000000, -570.000000)">
+        <g id="3" transform="translate(1004.000000, 227.000000)" fill="#BFBFBF" fill-rule="nonzero">
+            <g id="1-copy-3" transform="translate(3.000000, 331.000000)">
+                <g id="road" transform="translate(0.000000, 12.000000)">
+                    <rect id="Rectangle-path" x="7" y="0" width="3" height="2"></rect>
+                    <circle id="Oval" cx="12" cy="10" r="4"></circle>
+                    <path d="M5.5,18 C3.57,18 2,16.43 2,14.5 C2,12.57 3.57,11 5.5,11 L6,11 L6,9 L5.5,9 C2.468,9 0,11.467 0,14.5 C0,17.533 2.468,20 5.5,20 L12.586,20 L10.586,22 L12,23.414 L17.414,18 L5.5,18 Z" id="Shape"></path>
+                    <path d="M18.5,0 L12,0 L12,2 L18.5,2 C20.43,2 22,3.57 22,5.5 C22,7.43 20.43,9 18.5,9 L18,9 L18,11 L18.5,11 C21.532,11 24,8.533 24,5.5 C24,2.467 21.532,0 18.5,0 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

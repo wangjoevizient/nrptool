@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="81px" height="96px" viewBox="0 0 81 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>flag-complex</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ToolKit-LandingPage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-947.000000, -758.000000)" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Group-3" transform="translate(126.000000, 761.000000)" stroke-width="6">
+            <g id="Group-10-Copy-2" transform="translate(820.000000, 0.000000)">
+                <g id="flag-complex" transform="translate(4.000000, 0.000000)">
+                    <polyline id="Shape" stroke="#00CC99" points="45 21 75 21 66 42 75 63 21 63"></polyline>
+                    <polyline id="Shape" stroke="#FF4E00" points="0 9 45 9 45 51 0 51"></polyline>
+                    <path d="M0,0 L0,90" id="Shape" stroke="#FF4E00"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

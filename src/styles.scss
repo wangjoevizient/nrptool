@@ -1,5 +1,8 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
+* {
+	font-family: soleto !important;
+}
 .mat-cell {
 	color: grey;
 	font-weight: 300 !important; 
@@ -13,7 +16,7 @@
 
 .mat-header-row {
 	background-color: whitesmoke;
-	//border-top: gainsboro solid 1px;
+	border-top: gainsboro solid 1px;
 }
 
 .mat-icon {
@@ -28,4 +31,18 @@
 
 .has-danger {
 	border-color: red;
+}
+
+.mat-dialog-container {
+	width: 1100px !important; 
+	float: left; 
+	white-space:nowrap;
+}
+
+mat-row:nth-child(odd){
+	background-color:whitesmoke;
+}
+
+.mat-elevation-z8 {
+	box-shadow: none !important;
 }

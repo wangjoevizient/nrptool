@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="24px" viewBox="0 0 21 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>pantone</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ToolKit-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-137.000000, -309.000000)">
+        <g id="1" transform="translate(135.000000, 227.000000)" fill="#BFBFBF" fill-rule="nonzero">
+            <g transform="translate(2.000000, 70.000000)" id="pantone">
+                <g transform="translate(0.000000, 12.000000)">
+                    <path d="M20.518,9.025 L18.241,7.65 L15.941,16.934 L20.857,10.397 C21.142,9.925 20.99,9.311 20.518,9.025 Z" id="Shape"></path>
+                    <path d="M16.241,3.25 L14,2.694 L14,16.454 L16.971,4.461 C17.104,3.925 16.777,3.383 16.241,3.25 Z" id="Shape"></path>
+                    <path d="M0,16 L0,23 C0,23.553 0.448,24 1,24 L11,24 C11.552,24 12,23.553 12,23 L12,16 L0,16 Z M6,22 C4.897,22 4,21.103 4,20 C4,18.897 4.897,18 6,18 C7.103,18 8,18.897 8,20 C8,21.103 7.103,22 6,22 Z" id="Shape"></path>
+                    <path d="M12,14 L12,1 C12,0.447 11.552,0 11,0 L1,0 C0.447,0 0,0.447 0,1 L0,14 L12,14 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

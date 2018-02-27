@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AddResidentComponent } from './add-resident/add-resident.component';
 import { TerminationReportComponent } from './termination-report/termination-report.component';
+import { EditColumnsComponent } from './edit-columns/edit-columns.component'
 //Angular Material Components
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule, MatSortModule} from '@angular/material';
@@ -20,6 +21,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material'
+import { MatDialogModule } from '@angular/material/dialog';
 //Pips
 import { BooleanPipe } from '../pipes/boolean.pipe';
 
@@ -30,10 +32,11 @@ import { BooleanPipe } from '../pipes/boolean.pipe';
     SurveyStatusComponent,
     AddResidentComponent,
 		TerminationReportComponent,
+		EditColumnsComponent,
 		BooleanPipe
   ],
   imports: [
-    BrowserModule,
+		BrowserModule,
 		AppRoutingModule,
 		CommonModule,
     HttpModule,
@@ -47,8 +50,12 @@ import { BooleanPipe } from '../pipes/boolean.pipe';
 		MatIconModule,
 		MatButtonModule,
 		MatDatepickerModule,
-		MatNativeDateModule
-  ],
+		MatNativeDateModule,
+		MatDialogModule
+	],
+	entryComponents: [
+		EditColumnsComponent
+	],
   providers: [DataService, SharedService],
 	bootstrap: [AppComponent],
 	schemas: [

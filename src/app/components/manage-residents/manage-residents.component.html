@@ -24,9 +24,9 @@
       <i class="fa fa-refresh padding-xs-right" aria-hidden="true"></i> Reset All </a>
     <a href="" class="btn btn-lg btn-secondary padding-md-left padding-md-right margin-xs-right">
       <i class="fa fa-filter padding-xs-right" aria-hidden="true"></i> Filters </a>
-    <a href="" class="btn btn-lg btn-secondary padding-md-left padding-md-right margin-xs-right">
+    <a (click)="openEditColumns()" class="btn btn-lg btn-secondary padding-md-left padding-md-right margin-xs-right">
       <span class="margin-xs-right">+/-</span> Columns </a>
-    <a href="" class="btn btn-lg btn-secondary padding-md-left padding-md-right">
+    <a (click)="exportCSV()" class="btn btn-lg btn-secondary padding-md-left padding-md-right">
       <i class="fa fa-share-square-o padding-xs-right" aria-hidden="true"></i> Export </a>
   </div>
 </div>
@@ -35,14 +35,14 @@
 <div class="example-container mat-elevation-z8">
   <mat-table #table [dataSource]="dataSource" matSort>
 
-    <ng-container matColumnDef="rnid">
+    <ng-container matColumnDef="rnId">
       <mat-header-cell *matHeaderCellDef mat-sort-header> RNID </mat-header-cell>
-      <mat-cell *matCellDef="let rn"> {{rn.rnid}} </mat-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.rnId}} </mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="datehired">
+    <ng-container matColumnDef="cohortDate">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Cohort Date </mat-header-cell>
-      <mat-cell *matCellDef="let rn"> {{rn.datehired | date: 'MM/dd/yyyy'}} </mat-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.cohortDate | date: 'MM/dd/yyyy'}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="firstName">
@@ -53,29 +53,107 @@
     <ng-container matColumnDef="lastName">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </mat-header-cell>
       <mat-cell *matCellDef="let rn"> {{rn.lastName}} </mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="Email">
+		</ng-container>
+		
+    <ng-container matColumnDef="email">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>
-      <mat-cell *matCellDef="let rn"> {{rn.Organizationemailaddress}} </mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="StartDate">
+      <mat-cell *matCellDef="let rn"> {{rn.email}} </mat-cell>
+		</ng-container>
+		
+    <ng-container matColumnDef="employmentStartDate">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Employment Start Date </mat-header-cell>
-      <mat-cell *matCellDef="let rn"> {{rn.EmploymentStartdate}} </mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="unittypedesc">
+      <mat-cell *matCellDef="let rn"> {{rn.employmentStartDate | date: 'MM/dd/yyyy'}} </mat-cell>
+		</ng-container>
+		
+    <ng-container matColumnDef="typeOfUnit">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Type of Unit </mat-header-cell>
-      <mat-cell *matCellDef="let rn"> {{rn.unittypedesc}} </mat-cell>
-    </ng-container>
-
-    <ng-container matColumnDef="ABSENT">
+      <mat-cell *matCellDef="let rn"> {{rn.typeOfUnit}} </mat-cell>
+		</ng-container>
+		
+    <ng-container matColumnDef="leave">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Leave </mat-header-cell>
-      <mat-cell *matCellDef="let rn"> {{rn.ABSENT | boolean}} </mat-cell>
-    </ng-container>
-
-    <ng-container matColumnDef="Terminated">
+      <mat-cell *matCellDef="let rn"> {{rn.leave | boolean}} </mat-cell>
+		</ng-container>
+		
+    <ng-container matColumnDef="termination">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Termination </mat-header-cell>
-      <mat-cell *matCellDef="let rn"> {{rn.Terminated | boolean}} </mat-cell>
-    </ng-container>
+      <mat-cell *matCellDef="let rn"> {{rn.termination | boolean}} </mat-cell>
+		</ng-container>
+		
+		<ng-container matColumnDef="gender">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Gender </mat-header-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.gender}} </mat-cell>
+		</ng-container>
+
+		<ng-container matColumnDef="age">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Age </mat-header-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.age}} </mat-cell>
+		</ng-container>
+
+		<ng-container matColumnDef="ethnicity">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Ethnicity </mat-header-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.ethnicity}} </mat-cell>
+		</ng-container>
+
+		<ng-container matColumnDef="education">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> School </mat-header-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.education}} </mat-cell>
+		</ng-container>
+
+		<ng-container matColumnDef="degreeReceived">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Degree </mat-header-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.degreeReceived}} </mat-cell>
+		</ng-container>
+
+		<ng-container matColumnDef="previousNursingDegree">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Previous Degree </mat-header-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.previousNursingDegree}} </mat-cell>
+		</ng-container>
+
+		<ng-container matColumnDef="overallGPA">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> GPA </mat-header-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.overallGPA}} </mat-cell>
+		</ng-container>
+
+		<ng-container matColumnDef="meetingPlaceAccess">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Meeting Place Access </mat-header-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.meetingPlaceAccess}} </mat-cell>
+		</ng-container>
+
+		<ng-container matColumnDef="terminationUpdatedBy">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Terminated By </mat-header-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.terminationUpdatedBy}} </mat-cell>
+		</ng-container>
+
+		<ng-container matColumnDef="typeofLeave">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Type of Leave </mat-header-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.typeofLeave}} </mat-cell>
+		</ng-container>
+
+		<ng-container matColumnDef="dateTerminated">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Date Terminated </mat-header-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.dateTerminated| date: 'MM/dd/yyyy'}} </mat-cell>
+		</ng-container>
+
+		<ng-container matColumnDef="leaveFromDate">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Leave From Date </mat-header-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.leaveFromDate| date: 'MM/dd/yyyy'}} </mat-cell>
+		</ng-container>
+
+		<ng-container matColumnDef="terminationReason">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Termination Reason </mat-header-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.terminationReason}} </mat-cell>
+		</ng-container>
+
+		<ng-container matColumnDef="leaveToDate">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Leave To Date </mat-header-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.leaveToDate | date: 'MM/dd/yyyy'}} </mat-cell>
+		</ng-container>
+
+		<ng-container matColumnDef="terminationLastUpdatedOn">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Termination Last Updated On </mat-header-cell>
+      <mat-cell *matCellDef="let rn"> {{rn.terminationLastUpdatedOn}} </mat-cell>
+		</ng-container>
 
     <ng-container matColumnDef="mode">
       <mat-header-cell *matHeaderCellDef> </mat-header-cell>

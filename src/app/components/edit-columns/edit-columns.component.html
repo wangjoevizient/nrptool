@@ -1,0 +1,198 @@
+<div class="container-fluid">
+  <section>
+    <div class="pull-left padding-md-top">
+      <h5>Edit columns</h5>
+    </div>
+    <div class="pull-right padding-lg-top"> <a (click)="onResetSelection()"><i class="fa fa-refresh" aria-hidden="true"></i> Reset to Default</a> </div>
+  </section>
+</div>
+<hr>
+
+<div class="container-fluid">
+  <form [formGroup]="mainform" novalidate>
+    <div class="container-fluid">
+      <div class="col-xs-12 border-bottom-gray margin-sm-bottom">
+        <div class="form-group col-xs-12"> <span class="bold pull-left padding-sm-top">Demographics</span>
+          <div class="checkbox pull-left">
+            <div class="form-group">
+              <label>
+                <input (change) = "onAllDemographics($event)" formControlName="allDemographics" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">Select All</span> </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <div class="form-group col-xs-12 col-sm-6 col-md-3 col-lg-3">
+          <div class="checkbox">
+            <div class="form-group">
+              <label>
+                <input formControlName="rnId" class="form-control" type="checkbox" >
+                <span class="form-input"></span> <span class="form-label">RN ID</span> </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input formControlName="cohortDate" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">Cohort Date</span> </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input formControlName="gender" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">Gender</span> </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input formControlName="previousNursingDegree" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">Previous Non-Nursing Degree</span> </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-xs-12 col-sm-6 col-md-3 col-lg-3">
+          <div class="checkbox">
+            <div class="form-group">
+              <label>
+                <input formControlName="firstName" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">First Name</span> </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input formControlName="employmentStartDate" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">Employment Start Date</span> </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input formControlName="ethnicity" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">Ethnicity</span> </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input formControlName="overallGPA" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">GPA</span> </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-xs-12 col-sm-6 col-md-3 col-lg-3">
+          <div class="checkbox">
+            <div class="form-group">
+              <label>
+                <input formControlName="lastName" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">Last Name</span> </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input formControlName="typeOfUnit" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">Type of Unit</span> </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input formControlName="education" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">School</span> </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input formControlName="meetingPlaceAccess" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">NRP Meetingplace Access</span> </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-xs-12 col-sm-6 col-md-3 col-lg-3">
+          <div class="checkbox">
+            <div class="form-group">
+              <label>
+                <input formControlName='email' class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">Organization Email Address</span> </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input formControlName="age" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">Age</span> </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input formControlName="degreeReceived" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">Degree</span> </label>
+            </div>
+          </div>
+        </div>
+      </div>
+		<div class="col-xs-12 border-bottom-gray margin-sm-bottom">
+		<div class="form-group col-xs-12"> <span class="bold pull-left padding-sm-top">Leave/Termination</span>
+          <div class="checkbox pull-left">
+            <div class="form-group">
+              <label>
+                <input (change)="onAllLeave($event)" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">Select All</span> </label>
+            </div>
+          </div>
+        </div>
+		</div>
+      <div class="col-xs-12 border-bottom-gray margin-sm-bottom">
+        <div class="form-group col-xs-12 col-sm-6 col-md-3 col-lg-3">
+          <div class="checkbox">
+            <div class="form-group">
+              <label>
+                <input formControlName="leave" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">Leave</span> </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input formControlName="termination" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">Termination</span> </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input formControlName="terminationUpdatedBy" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">Termination Updated by</span> </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-xs-12 col-sm-6 col-md-3 col-lg-3">
+          <div class="checkbox">
+            <div class="form-group">
+              <label>
+                <input formControlName="typeofLeave" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">Type of Leave</span> </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input formControlName="dateTerminated" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">Date Terminated</span> </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-xs-12 col-sm-6 col-md-3 col-lg-3">
+          <div class="checkbox">
+            <div class="form-group">
+              <label>
+                <input formControlName="leaveFromDate" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">Leave From Date</span> </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input formControlName="terminationReason" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">Termination Reason</span> </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-xs-12 col-sm-6 col-md-3 col-lg-3">
+          <div class="checkbox">
+            <div class="form-group">
+              <label>
+                <input formControlName="leaveToDate" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">Leave To Date</span> </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input formControlName="terminationLastUpdatedOn" class="form-control" type="checkbox">
+                <span class="form-input"></span> <span class="form-label">Termination Last Updated On</span> </label>
+            </div>
+          </div>
+				</div>
+			</div>
+      <div class="col-xs-12 text-right">
+        <button class="btn btn-primary-ghost" (click)="onCancel()"> Cancel </button>
+        <button class="btn btn-primary" (click)="onSubmit()"> Save Changes </button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>compass-04</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ToolKit-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-597.000000, -570.000000)">
+        <g id="2" transform="translate(595.000000, 228.000000)" fill="#BFBFBF" fill-rule="nonzero">
+            <g id="1-copy-3" transform="translate(2.000000, 330.000000)">
+                <g id="compass-04" transform="translate(0.000000, 12.000000)">
+                    <path d="M12,0 C5.383,0 0,5.383 0,12 C0,18.617 5.383,24 12,24 C18.617,24 24,18.617 24,12 C24,5.383 18.617,0 12,0 Z M13,21.949 L13,20 L11,20 L11,21.949 C6.283,21.479 2.521,17.717 2.051,13 L4,13 L4,11 L2.051,11 C2.521,6.283 6.283,2.521 11,2.051 L11,4 L13,4 L13,2.051 C17.717,2.522 21.479,6.283 21.949,11 L20,11 L20,13 L21.949,13 C21.479,17.717 17.717,21.479 13,21.949 Z" id="Shape"></path>
+                    <path d="M9.238,9.238 L5.096,18.904 L14.762,14.762 L18.904,5.096 L9.238,9.238 Z M8.904,15.096 L10.762,10.762 L13.239,13.239 L8.904,15.096 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

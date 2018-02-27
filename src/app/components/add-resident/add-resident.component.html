@@ -5,7 +5,7 @@
   </div>
   <div class="form-group margin-sm-top"> </div>
 </div>
-<form [formGroup]="mainform">
+<form [formGroup]="mainform" >
   <div class="container-fluid">
     <div class="col-xs-12 col-sm-12 col-md-8">
       <div class="col-xs-12">
@@ -13,9 +13,10 @@
           <label>1. RN ID
             <span class="viz-orange">*</span>
           </label>
-          <input formControlName="rnId" class="form-control" type="text" [ngClass]="{
+          <input formControlName="rnId" (change)="CheckRNIDExists($event)" class="form-control" type="text" [ngClass]="{
 						'has-danger': mainform.controls.rnId.invalid && mainform.controls.rnId.touched
 					}">
+					<div><label class="alert-danger">{{rniderrormsg}}</label></div>
         </div>
       </div>
       <!-- 2 + 3 First Name - Last Name -->
@@ -44,9 +45,10 @@
           <label>4. Organization Email Address
             <span class="viz-orange">*</span>
           </label>
-          <input formControlName='email' class="form-control" type="text" [ngClass]="{
+          <input formControlName='email' (change)="ValidateOrganizationEmailAddress($event)" class="form-control" type="text" [ngClass]="{
 						'has-danger': mainform.controls.email.invalid && mainform.controls.email.touched
 					}">
+					<div><label class="alert-danger">{{orgEmailErrorMsg}}</label></div>
         </div>
       </div>
       <!-- /4 Organization Email Address -->
@@ -100,7 +102,7 @@
             </option>
           </select>
         </div>
-        <div class="form-group col-xs-12 col-sm-12 col-md-3">
+        <div *ngIf="selectedtypeofunit===16" class="form-group col-xs-12 col-sm-12 col-md-3">
           <label>Other (Specify)</label>
           <input formControlName="typeOfUnitOther" class="form-control" type="text">
         </div>
@@ -177,7 +179,7 @@
             </option>
           </select>
         </div>
-        <div class="form-group col-xs-12 col-sm-12 col-md-3">
+        <div *ngIf="selectedDegreeReceived===4" class="form-group col-xs-12 col-sm-12 col-md-3">
           <label>Other (Specify)</label>
           <input formControlName="degreeReceivedOther" class="form-control" type="text">
         </div>
@@ -197,7 +199,7 @@
             </option>
           </select>
         </div>
-        <div class="form-group col-xs-12 col-sm-12 col-md-3">
+        <div *ngIf="selectedPreviousnursingdegree==5" class="form-group col-xs-12 col-sm-12 col-md-3">
           <label>Major</label>
           <input formControlName="major" class="form-control" type="text" [ngClass]="{
 						'has-danger': mainform.controls.major.invalid && mainform.controls.major.touched
@@ -237,7 +239,7 @@
       <!--buttons-->
       <div class="col-xs-12 padding-sm-top">
         <div class="form-group col-xs-12 col-sm-12 col-md-6">
-          <button type="button" class="btn btn-lg btn-primary padding-md margin-xs-right"> Add Resident </button>
+          <button (click)="onSubmit()" type="button" class="btn btn-lg btn-primary padding-md margin-xs-right"> Add Resident </button>
           <a routerLink="/manage-residents" class="btn btn-lg btn-secondary padding-md"> Cancel </a>
         </div>
       </div>
@@ -246,11 +248,11 @@
       <div class="padding-md bg-ex-light-gray margin-md-top">
         <h4>Resources</h4>
         <p>
-          <a href="">
+          <a href="../../../public/documents/NRP_RN_Demographic_Form.pdf" target="_blank">
             <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Resident Demographic Form</a>
         </p>
         <p>
-          <a href="">
+          <a href="../../../public/documents/NRP_Standardized_Unit_Definitions.pdf" target="_blank">
             <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Unit Defintions</a>
         </p>
       </div>

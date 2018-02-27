@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="32px" viewBox="0 0 28 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>atom</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ToolKit-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-134.000000, -226.000000)">
+        <g id="1" transform="translate(135.000000, 227.000000)" stroke-width="2">
+            <g id="Group">
+                <g id="atom">
+                    <circle id="Oval" stroke="#00CC99" stroke-linecap="square" cx="13" cy="15" r="2"></circle>
+                    <path d="M8.453,6.695 C9.43,2.651 11.102,0 13,0 C16.012,0 18.455,6.716 18.455,15 C18.455,23.284 16.012,30 13,30 C10.351,30 8.142,24.815 7.649,17.927" id="Shape" stroke="#FF4E00"></path>
+                    <path d="M8.446,23.307 C4.524,24.657 1.388,24.683 0.367,23.088 C-1.257,20.551 3.082,14.873 10.059,10.407 C17.036,5.941 24.009,4.376 25.633,6.913 C27.062,9.145 23.876,13.807 18.34,17.937" id="Shape" stroke="#FF4E00"></path>
+                    <path d="M12.988,8.684 C7.094,5.578 1.761,4.735 0.367,6.912 C-1.257,9.449 3.082,15.127 10.059,19.593 C17.036,24.059 24.009,25.624 25.633,23.087 C26.731,21.372 25.094,18.271 21.767,15.029" id="Shape" stroke="#FF4E00"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

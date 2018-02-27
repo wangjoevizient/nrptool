@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ToolKit-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1007.000000, -483.000000)">
+        <g id="3" transform="translate(1004.000000, 227.000000)" fill="#BFBFBF" fill-rule="nonzero">
+            <g id="1-copy-2" transform="translate(3.000000, 244.000000)">
+                <g id="path-intersect" transform="translate(0.000000, 12.000000)">
+                    <path d="M23,0 L8,0 C7.447,0 7,0.447 7,1 L7,7 L1,7 C0.447,7 0,7.447 0,8 L0,23 C0,23.553 0.447,24 1,24 L16,24 C16.553,24 17,23.553 17,23 L17,17 L23,17 C23.553,17 24,16.553 24,16 L24,1 C24,0.447 23.553,0 23,0 Z M15,22 L2,22 L2,9 L7,9 L7,16 C7,16.553 7.447,17 8,17 L15,17 L15,22 Z M22,15 L17,15 L17,8 C17,7.447 16.553,7 16,7 L9,7 L9,2 L22,2 L22,15 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

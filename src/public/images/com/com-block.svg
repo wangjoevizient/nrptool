@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>cards</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ToolKit-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-597.000000, -396.000000)">
+        <g id="2" transform="translate(595.000000, 228.000000)" fill="#BFBFBF" fill-rule="nonzero">
+            <g id="1-copy" transform="translate(2.000000, 156.000000)">
+                <g id="cards" transform="translate(0.000000, 12.000000)">
+                    <rect id="Rectangle-path" x="0" y="0" width="14" height="17" rx="1"></rect>
+                    <path d="M22.859,7.168 L16.3,5.393 L15.778,7.324 L21.378,8.838 L17.979,21.386 L6.395,18.255 L5.874,20.186 L18.424,23.579 C18.6800668,23.6480959 18.9530941,23.6126362 19.1830155,23.480422 C19.4129369,23.3482078 19.580917,23.1300702 19.65,22.874 L23.563,8.394 C23.7069525,7.86107028 23.3918355,7.31230105 22.859,7.168 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

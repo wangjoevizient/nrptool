@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Headers } from '@angular/http';
+import { Http, Response, Headers, RequestOptions,RequestMethod} from '@angular/http';
 import 'rxjs/add/operator/map'
 import { Observable } from 'rxjs/Observable';
 import { environment } from '../../environments/environment';
-
+import { rnInfo } from '../models/rnInfo.model';
+import { mangresifilter } from '../models/mangresifilter.model';
 @Injectable()
 export class DataService {
 
@@ -52,6 +53,42 @@ export class DataService {
 			return this._http.get(this.webapiRoot + "GetOverallGPA/6")
 					.map((response: Response) => <any>response.json());
 
+	}
+
+	public postNewResident(resi:rnInfo)
+    {    
+		console.log('saving...');
+		console.log(resi)
+
+        var body=JSON.stringify(resi);
+        var headerOptions= new Headers({'Content-Type':'application/json'});
+        var requestOption = new RequestOptions({method:RequestMethod.Post,headers:headerOptions});
+        return this._http.post(this.webapiRoot +"InsertResidentData",body,requestOption).
+        map(x=>console.log("service->"+x));
+	}
+	
+   public CheckRNIDExists = (orgid,rnid): Observable<any> => {
+		return this._http.get(this.webapiRoot + "CheckRNIDExists/"+ rnid +"/"+orgid)
+				.map((response: Response) => <any>response.json());
+			}
+
+   public ValidateOrganizationEmailAddress = (orgid,emailAddress): Observable<any> => {
+				return this._http.get(this.webapiRoot + "ValidateOrganizationEmailAddress/"+ orgid +"/"+ emailAddress)
+						.map((response: Response) => <any>response.json());
+					}
+	
+
+    public Getmanageresidentfilter=(mangresi:mangresifilter) : Observable<any> => {
+        
+		console.log('Getmanageresidentfilter...');
+		console.log(mangresi);
+
+		var body=JSON.stringify(mangresi);
+		console.log("body ->"+body);
+        var headerOptions= new Headers({'Content-Type':'application/json'});
+        var requestOption = new RequestOptions({method:RequestMethod.Post,headers:headerOptions});
+        return this._http.post(this.webapiRoot +"GetFilterDemographicsData",body,requestOption)
+		.map((response: Response) => <any>response.json());	
 	}
 
 }

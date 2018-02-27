@@ -1,0 +1,23 @@
+@import url(~@angular/material/prebuilt-themes/deeppurple-amber.css);
+.mat-cell {
+  color: grey;
+  font-weight: 300 !important; }
+
+.mat-sort-header-button {
+  color: black !important;
+  font-size: 14px !important;
+  font-weight: 400 !important; }
+
+.mat-header-row {
+  background-color: whitesmoke; }
+
+.mat-icon {
+  margin: auto;
+  vertical-align: middle;
+  display: inline-block; }
+
+.mat-column-mode a {
+  color: grey !important; }
+
+.has-danger {
+  border-color: red; }

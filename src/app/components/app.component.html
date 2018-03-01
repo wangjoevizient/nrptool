@@ -1,58 +1,77 @@
-<apollo-vha-header logo-href="./public/images/logo.svg">
-  <nav class="navbar navbar-default">
-    <header>
-      <div id="navbar" class="container-fluid navbar-collapse collapse">
-        <div class="nav navbar-nav navbar-header"><img class="wordmark" alt="" src="./public/images/logo-white.svg"><a href="#" class="app-name padding-sm-left hidden-xs">Nurse Residency Program Admin Tool</a></div>
-					<div class="pull-right"><a href="#" class="app-name padding-sm-left padding-lg-right hidden-xs">Hi, Joe</a>
-						<span class="app-name padding-md-right">
-							<select required name="Organization"
-								#refOrganization="ngModel"
-								class="form-control" 
-								[(ngModel)]="selectedOrganization"
-								(ngModelChange)="onOrgChange($event)">
-							<option *ngFor="let org of organizations"
-								[ngValue]="org.orgId">{{org.orgName}}
-								
-							</option>
-						</select>			
-					</span> 
-				</div>
-      </div>
-    </header>
-  </nav>
-</apollo-vha-header>
-<!-- /Vizient Header - lg --> 
+<header class="nav-bar docs-ux-navbar nav-bar-dark">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button class="collapsed navbar-toggle" aria-controls="viz-navbar" aria-expanded="false" data-target="#viz-navbar" data-toggle="collapse"
+        type="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <span class="navbar-brand">
+        <a href="index.html">
+          <img src="../../public/images/logo-white.svg" alt="Vizient">
+        </a>
+        <span class="page-name hidden-xs hidden-sm">Nurse Residency Program Admin Tool</span>
+      </span>
+    </div>
+    <div class="collapse navbar-collapse" id="viz-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="buttons.html">Hi, User Name</a>
+        </li>
+        <li>
+          <a>
+            <select required name="Organization" #refOrganization="ngModel" class="form-control" [(ngModel)]="selectedOrganization" (ngModelChange)="onOrgChange($event)">
+              <option *ngFor="let org of organizations" [ngValue]="org.orgId">{{org.orgName}}
+              </option>
+            </select>
+            <!-- <i class="fa fa-caret-down fa-lg padding-sm-left" aria-hidden="true"></i> -->
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+<!-- /Vizient Header - lg -->
 <!-- Subheader Menu -->
-<apollo-header>
+<div class="container-fluid padding-md">
   <section>
-    <nav class="navbar navbar-inverse navbar-xs margin-none-bottom">
-      <header class="container-fluid">
-        <div class="container-fluid">
-          <ul class="nav nav-tabs tabs-minimal navbar-left">
-            <li routerLinkActive="value-group-name active" class="value-group-name active"><a routerLink="manage-residents" >Manage Residents</a></li>
-            <li routerLinkActive="value-group-name active"><a routerLink="survey-status" >Survey Status</a></li>
-            <li><a href="#">Termination Report</a></li>
-            <li><a href="#">Access Report</a></li>
-            <li><a href="#">Manage Org Profile</a></li>
-            <li><a href="#">Data Download</a></li>
-            <li><a href="https://nursing.test.vizientinc.com/NRP-Dashboard/" target="_blank">Dashboard</a></li>
-            <li><a href="https://www.vizientinc.com/My-Dashboard/My-Tools/Nurse-Residency-Program"  target="_blank">NRP Home</a></li>
-          </ul>
-        </div>
-      </header>
-    </nav>
+    <ul class="nav nav-tabs nav-tabs-sm">
+      <li routerLinkActive="active"><a routerLink="manage-residents">Manage Residents</a></li>
+      <li routerLinkActive="active"><a routerLink="survey-status">Survey Status</a></li>
+      <li><a href="#">Access Report</a></li>
+      <li><a href="#">Manage Org Profile</a></li>
+      <li><a href="#">Data Download</a></li>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">NRP Home</a></li>
+      <li><a href="#">Vizient Admin</a></li>
+    </ul>
   </section>
-</apollo-header>
-<!-- /Subheader Menu --> 
+</div>
+<hr>
+<!-- /Subheader Menu -->
 <router-outlet></router-outlet>
 
 <footer class="footer">
-	<div class="container-fluid padding-sm">
-		<div class="col-xs-12 col-lg-2 pull-left">
-			<p>Vizient/AACN Nurse Residency Program <br>
-				©2018 Vizient Inc. All Rights Reserved </p>
-		</div>
-		<div class="col-xs-12 col-lg-2 pull-right text-right"> <a href="https://www.vizientinc.com" target="_blank">Vizient Home Page</a><br>
-			Contact us at <a href="mailto:nrpinfo@vizientinc.com?subject=NRP Admin Tool" target="_top">nrpinfo@vizientinc.com</a> </div>
-	</div>
+  <div class="container-fluid padding-sm">
+    <div class="col-xs-12 col-lg-2 pull-left">
+      <p>Vizient/AACN Nurse Residency Program
+        <br> ©2018 Vizient Inc. All Rights Reserved </p>
+    </div>
+    <div class="col-xs-12 col-lg-2 pull-right text-right">
+      <a href="https://www.vizientinc.com" target="_blank">Vizient Home Page</a>
+      <br> Contact us at
+      <a href="mailto:nrpinfo@vizientinc.com?subject=NRP Admin Tool" target="_top">nrpinfo@vizientinc.com</a>
+    </div>
+  </div>
 </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script> 
+<script src="https://code.highcharts.com/highcharts.js"></script> 
+<script src="https://code.highcharts.com/highcharts-more.js"></script> 
+<script src="https://code.highcharts.com/modules/exporting.js"></script> 
+<script src="../../public/js/components.js"></script> 
+<script src="../../public/js/toolkit-web.js"></script>

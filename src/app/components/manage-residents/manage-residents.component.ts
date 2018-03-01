@@ -51,6 +51,7 @@ export class ManageResidentsComponent implements OnInit {
 			localStorage.setItem('showColumns', JSON.stringify(this.showColumns));
 		};
 		this.displayedColumns = Object.keys(this.showColumns).filter(k => this.showColumns[k] == true).map( c => c );
+		this.displayedColumns.push("mode");
 		console.log(this.displayedColumns);
 	}
 
@@ -67,8 +68,11 @@ export class ManageResidentsComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-			this.displayedColumns = Object.keys(result).filter(k => result[k] == true).map( c => c );
-			console.log(this.displayedColumns)
+			if(result) {
+				this.displayedColumns = Object.keys(result).filter(k => result[k] == true).map( c => c );
+				this.displayedColumns.push("mode");
+				console.log(this.displayedColumns);
+			}
 		});
 	}
 	
@@ -76,6 +80,4 @@ export class ManageResidentsComponent implements OnInit {
 		let exporter = new ExportToCSV();
 		exporter.exportColumnsToCSV(this.dataSource.data, "cohort.csv", this.displayedColumns)
 	}
-
-
 }

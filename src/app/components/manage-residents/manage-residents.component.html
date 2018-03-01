@@ -1,36 +1,40 @@
 <!-- Ressident Add/Upload -->
-<div class="border-bottom-light-gray">
-  <div class="container padding-md">
-    <div class="float-left margin-md-right margin-top-xs">
-      <h3>Residents</h3>
+
+<div class="container-fluid padding-lg-left">
+  <section>
+    <div class="padding-md-top pull-left">
+      <h5>Residents</h5>
     </div>
-    <div class="form-group margin-sm-top">
-      <a routerLink="/add-resident" class="btn btn-lg btn-primary padding-md margin-xs-right"> Add New Resident </a>
-      <a href="" class="btn btn-lg btn-secondary padding-md"> Bulk Upload </a>
+    <div class="col-xs-12 col-sm-3 col-md-4 padding-sm">
+      <button routerLink="/add-resident" class="btn btn-primary btn-lg padding-md margin-xs"> Add New Resident</button>
+      <button class="btn btn-secondary btn-lg padding-md margin-xs"> Bulk Upload </button>
     </div>
-  </div>
+  </section>
 </div>
+<hr>
 <!-- /Ressident Add/Upload -->
-<!-- Search & Filters -->
-<div class="container padding-md">
-  <div class="pull-left col-xs-12 col-sm-4 padding-md-top padding-none-left">
-    <div class="form-group">
-      <label class="sr-only">Search</label>
-      <input class="form-control" matInput (keyup)="applyFilter($event.target.value)" placeholder="Search...">
+<div class="container-fluid padding-lg-left padding-md-bottom">
+  <section>
+    <div class="pull-left">
+      <form>
+        <div class="search-holder search-gray">
+          <input class="search-input" matInput (keyup)="applyFilter($event.target.value)" type="text" placeholder="Search">
+          <!-- <button class="search-submit fa fa-search" type="submit"></button> -->
+        </div>
+      </form>
     </div>
-  </div>
-  <div class="margin-sm-top pull-right col-xs-12 col-sm-6 text-right no-padding">
-    <a href="" class="btn btn-lg btn-secondary-ghost padding-md-left padding-md-right margin-xs-right">
-      <i class="fa fa-refresh padding-xs-right" aria-hidden="true"></i> Reset All </a>
-    <a href="" class="btn btn-lg btn-secondary padding-md-left padding-md-right margin-xs-right">
-      <i class="fa fa-filter padding-xs-right" aria-hidden="true"></i> Filters </a>
-    <a (click)="openEditColumns()" class="btn btn-lg btn-secondary padding-md-left padding-md-right margin-xs-right">
-      <span class="margin-xs-right">+/-</span> Columns </a>
-    <a (click)="exportCSV()" class="btn btn-lg btn-secondary padding-md-left padding-md-right">
-      <i class="fa fa-share-square-o padding-xs-right" aria-hidden="true"></i> Export </a>
-  </div>
+    <!-- Entry Count -->
+    <!-- <div class="col-xs-12 col-lg-2 padding-md"> <span>1</span>-<span>10</span> of <span>50</span> entries </div> -->
+    <!-- /Entry Count --> 
+    <!-- Filter Buttons -->
+    <div class="pull-right col-xs-12 col-sm-12 col-md-6 col-lg-4  text-right no-padding">
+      <button class="btn btn-secondary margin-xs"><i class="fa fa-filter padding-xs-right" aria-hidden="true"></i> Filters </button>
+      <button (click)="openEditColumns()" class="btn btn-secondary margin-xs"> <i class="fa fa-columns padding-xs-right" aria-hidden="true"></i> Edit Columns </button>
+      <button (click)="exportCSV()" class="btn btn-secondary margin-xs"> <i class="fa fa-share-square-o padding-xs-right" aria-hidden="true"></i> Export </button>
+    </div>
+    <!-- /Filter Buttons --> 
+  </section>
 </div>
-<!-- /Search & Filters -->
 
 <div class="example-container mat-elevation-z8">
   <mat-table #table [dataSource]="dataSource" matSort>
@@ -158,8 +162,8 @@
     <ng-container matColumnDef="mode">
       <mat-header-cell *matHeaderCellDef> </mat-header-cell>
       <mat-cell *matCellDef="let rn"> {{rn.mode}}
-        <a routerLink='/edit-resident/{{rn.rnid}}'>Edit
-          <mat-icon>mode_edit</mat-icon>
+        <a routerLink='/edit-resident/{{rn.rnId}}'>Edit
+          <i class="fa fa-pencil" aria-hidden="true"></i>
         </a>
       </mat-cell>
     </ng-container>

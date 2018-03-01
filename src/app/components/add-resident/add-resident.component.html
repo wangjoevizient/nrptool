@@ -10,8 +10,7 @@
     <div class="col-xs-12 col-sm-12 col-md-8">
       <div class="col-xs-12">
         <div class="form-group col-xs-12 col-sm-12 col-md-8 col-lg-8 padding-md-top margin-none-left">
-          <label>1. RN ID
-            <span class="viz-orange">*</span>
+          <label>1. RN ID *
           </label>
           <input formControlName="rnId" (change)="CheckRNIDExists($event)" class="form-control" type="text" [ngClass]="{
 						'has-danger': mainform.controls.rnId.invalid && mainform.controls.rnId.touched
@@ -22,16 +21,14 @@
       <!-- 2 + 3 First Name - Last Name -->
       <div class="col-xs-12 col-sm-12 col-md-8 padding-sm-top">
         <div class="form-group col-xs-12 col-sm-6 col-md-5">
-          <label>2. First Name
-            <span class="viz-orange">*</span>
+          <label>2. First Name *
           </label>
           <input formControlName="firstName" class="form-control" type="text" [ngClass]="{
 						'has-danger': mainform.controls.firstName.invalid && mainform.controls.firstName.touched
 					}">
         </div>
         <div class="form-group col-xs-12 col-sm-6 col-md-5">
-          <label>3. Last Name
-            <span class="viz-orange">*</span>
+          <label>3. Last Name *
           </label>
           <input formControlName="lastName" class="form-control" type="text" [ngClass]="{
 						'has-danger': mainform.controls.lastName.invalid && mainform.controls.lastName.touched
@@ -42,11 +39,10 @@
       <!-- 4 Organization Email Address -->
       <div class="col-xs-12 padding-sm-top">
         <div class="form-group col-xs-12 col-sm-12 col-md-8">
-          <label>4. Organization Email Address
-            <span class="viz-orange">*</span>
+          <label>4. Organization Email Address *
           </label>
-          <input formControlName='email' (change)="ValidateOrganizationEmailAddress($event)" class="form-control" type="text" [ngClass]="{
-						'has-danger': mainform.controls.email.invalid && mainform.controls.email.touched
+          <input formControlName='Organizationemailaddress' (change)="ValidateOrganizationEmailAddress($event)" class="form-control" type="text" [ngClass]="{
+						'has-danger': mainform.controls.Organizationemailaddress.invalid && mainform.controls.Organizationemailaddress.touched
 					}">
 					<div><label class="alert-danger">{{orgEmailErrorMsg}}</label></div>
         </div>
@@ -55,8 +51,7 @@
       <!-- 5 + 6  Dates -->
       <div class="col-xs-12 padding-sm-top">
         <div class="form-group col-xs-12 col-sm-12 col-md-5 col-lg-3">
-          <label>5. Cohort Date
-            <span class="viz-orange">*</span>
+          <label>5. Cohort Date *
           </label>
           <div class="input-group">
             <input formControlName="cohortDate" [matDatepicker]="cohortdatepicker" type="text" class="form-control dropdown-menu-right dropdown-menu-up"
@@ -70,8 +65,7 @@
           </div>
         </div>
         <div class="form-group col-xs-12 col-sm-12 col-md-5 col-lg-3">
-          <label>6. Employment Start Date
-            <span class="viz-orange">*</span>
+          <label>6. Employment Start Date *
           </label>
           <div class="input-group">
             <input formControlName="employmentStartDate" [matDatepicker]="employmentstartdatepicker" type="text" class="form-control dropdown-menu-right dropdown-menu-up"
@@ -89,8 +83,7 @@
       <!-- 7 Type of unit -->
       <div class="col-xs-12 padding-sm-top">
         <div class="form-group col-xs-12 col-sm-12 col-md-6">
-          <label>7. Type of unit
-            <span class="viz-orange">*</span>
+          <label>7. Type of unit *
           </label>
           <select formControlName="typeOfUnit" required name="typeofunit" class="form-control" [(ngModel)]="selectedtypeofunit" [ngClass]="{
 						'has-danger': mainform.controls.typeOfUnit.invalid && mainform.controls.typeOfUnit.touched
@@ -111,8 +104,7 @@
       <!-- 8 Age in years -->
       <div class="col-xs-12 padding-sm-top">
         <div class="form-group col-xs-12 col-sm-12 col-md-6">
-          <label>8. Age in years (at date of hire)
-            <span class="viz-orange">*</span>
+          <label>8. Age in years (at date of hire) *
           </label>
           <input formControlName="age" class="form-control" type="text" [ngClass]="{
 						'has-danger': mainform.controls.age.invalid && mainform.controls.age.touched
@@ -123,8 +115,7 @@
       <!-- 9 Gender -->
       <div class="col-xs-12 padding-sm-top">
         <div class="form-group col-xs-12 col-sm-12 col-md-6">
-          <label>9. Gender
-            <span class="viz-orange">*</span>
+          <label>9. Gender *
           </label>
           <select formControlName="gender" required name="gender" class="form-control" [(ngModel)]="selectedgender" [ngClass]="{
 						'has-danger': mainform.controls.gender.invalid && mainform.controls.gender.touched
@@ -141,8 +132,7 @@
       <!-- 10 Ethnicity -->
       <div class="col-xs-12 padding-sm-top">
         <div class="form-group col-xs-12 col-sm-12 col-md-6">
-          <label>10. Ethnicity
-            <span class="viz-orange">*</span>
+          <label>10. Ethnicity *
           </label>
           <select formControlName="ethnicity" required name="Ethnicity" class="form-control" [(ngModel)]="selectedEthnicity" [ngClass]="{
 						'has-danger': mainform.controls.ethnicity.invalid && mainform.controls.ethnicity.touched
@@ -156,8 +146,7 @@
       </div>
       <div class="col-xs-12 padding-sm-top">
         <div class="form-group col-xs-12 col-sm-12 col-md-6">
-          <label>11. Basic nursing education completed at
-            <span class="viz-orange">*</span>
+          <label>11. Basic nursing education completed at *
           </label>
           <input formControlName="education" class="form-control" type="text" [ngClass]="{
 						'has-danger': mainform.controls.education.invalid && mainform.controls.education.touched
@@ -166,8 +155,7 @@
       </div>
       <div class="col-xs-12 padding-sm-top">
         <div class="form-group col-xs-12 col-sm-12 col-md-6">
-          <label>12. Degree received
-            <span class="viz-orange">*</span>
+          <label>12. Degree received *
           </label>
           <select formControlName="degreeReceived" required name="DegreeReceived" class="form-control" [(ngModel)]="selectedDegreeReceived"
             [ngClass]="{
@@ -186,8 +174,7 @@
       </div>
       <div class="col-xs-12 padding-sm-top">
         <div class="form-group col-xs-12 col-sm-12 col-md-6">
-          <label>13. Previous non-nursing degree
-            <span class="viz-orange">*</span>
+          <label>13. Previous non-nursing degree *
           </label>
           <select formControlName="previousNursingDegree" required name="Previousnursingdegree" class="form-control" [(ngModel)]="selectedPreviousnursingdegree"
             [ngClass]="{
@@ -208,8 +195,7 @@
       </div>
       <div class="col-xs-12 padding-sm-top">
         <div class="form-group col-xs-12 col-sm-12 col-md-6">
-          <label>14. Overall grade point average
-            <span class="viz-orange">*</span>
+          <label>14. Overall grade point average *
           </label>
           <select formControlName="overallGPA" required name="OverallGPA" class="form-control" [(ngModel)]="selectedOverallGPA" [ngClass]="{
 						'has-danger': mainform.controls.overallGPA.invalid && mainform.controls.overallGPA.touched
@@ -223,8 +209,7 @@
       </div>
       <div class="col-xs-12 padding-sm-top">
         <div class="form-group col-xs-12 col-sm-12 col-md-6">
-          <label>15 Grant NRP meeting place access
-            <span class="viz-orange">*</span>
+          <label>15 Grant NRP meeting place access *
           </label>
           <div class="radio">
             <label>
@@ -258,5 +243,4 @@
       </div>
     </div>
   </div>
-  <pre>{{mainform.value | json}}</pre>
 </form>
